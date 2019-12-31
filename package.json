@@ -1,0 +1,17 @@
+{
+  "name": "com.omiyagames.common",
+  "version": "0.0.0",
+  "displayName": "Omiya Games' Common Utilities",
+  "description": "Utility scripts Omiya Games uses for most of their tools and projects.",
+  "unity": "2019.2",
+  "unityRelease": "14f1",
+  "type": "library",
+  "license": "MIT",
+  "author": {
+    "name": "Taro Omiya",
+    "email": "support@omiyagames.com",
+    "url": "https://www.omiyagames.com"
+  },
+  "dependencies": {
+  }
+}
