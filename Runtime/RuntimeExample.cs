@@ -31,7 +31,7 @@ namespace OmiyaGames.Common
     /// <date>12/31/2019</date>
     ///-----------------------------------------------------------------------
     /// <summary>
-    /// This is an example script for starting a package
+    /// This is an example script for starting a package.
     /// </summary>
     /// 
     /// <seealso cref="EditorExample"/>

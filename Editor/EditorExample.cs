@@ -33,7 +33,7 @@ namespace OmiyaGames.Common.Editor
     /// <date>12/31/2019</date>
     ///-----------------------------------------------------------------------
     /// <summary>
-    /// [Documentation Goes Here]
+    /// This is an example script for starting an editor inspector.
     /// </summary>
     /// 
     /// <seealso cref="RuntimeExample"/>
