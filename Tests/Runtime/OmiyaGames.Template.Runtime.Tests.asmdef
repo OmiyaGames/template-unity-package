@@ -1,6 +1,8 @@
 {
-    "name": "OmiyaGames.Common.Editor",
-    "references": [],
+    "name": "OmiyaGames.Template.Runtime.Tests",
+    "references": [
+        "OmiyaGames.Template.Runtime"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
