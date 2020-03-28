@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace OmiyaGames.Common
+namespace OmiyaGames.Template
 {
     ///-----------------------------------------------------------------------
     /// <copyright file="RuntimeExample.cs" company="Omiya Games">

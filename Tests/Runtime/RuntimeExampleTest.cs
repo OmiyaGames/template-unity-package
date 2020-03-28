@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace OmiyaGames.Common.Tests
+namespace OmiyaGames.Template.Tests
 {
     ///-----------------------------------------------------------------------
     /// <copyright file="RuntimeExampleTest.cs" company="Omiya Games">

@@ -1,7 +1,7 @@
 {
-    "name": "OmiyaGames.Template.Runtime.Tests",
+    "name": "OmiyaGames.Template.Tests",
     "references": [
-        "OmiyaGames.Template.Runtime"
+        "OmiyaGames.Template"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
