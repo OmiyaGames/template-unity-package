@@ -13,5 +13,12 @@
     "url": "https://www.omiyagames.com"
   },
   "dependencies": {
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Example 1",
+      "description": "This sample is just an example",
+      "path": "Samples~/Example1"
+    }
+  ]
 }
