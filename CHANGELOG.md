@@ -1,5 +1,9 @@
 # Change Log:
 
+## 1.1.0
+
+- Feature: adding a [`Documentation~/Doxyfile`](/Documentation~/Doxyfile) to make generating [Doxygen](http://doxygen.nl/) files a little easier.
+
 ## 1.0.2
 
 - Typo: renaming `Documentation~/index.md` to [`Documentation~/Template.md`](/Documentation~/Template.md) to match Unity recommendation.
