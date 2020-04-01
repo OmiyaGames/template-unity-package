@@ -1,5 +1,11 @@
 # Change Log:
 
+## 1.0.1
+
+- Bug fix: [`Editor/EditorExample.cs`](/Editor/EditorExample.cs) now compiles properly.
+- Typo: updated namespace in [`Tests/Editor/EditorExampleTest.cs`](/Tests/Editor/EditorExampleTest.cs) to inlucde `Test`.
+- Typo: changing the [`THIRD PARTY NOTICES.md`](/THIRD%20PARTY%20NOTICES.md) Credits section to use a list, so each field is in its own line.
+
 ## 1.0.0
 
 - Initial release:
