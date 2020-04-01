@@ -55,7 +55,7 @@ namespace OmiyaGames.Template.Editor
     /// </list>
     /// </remarks>
     [CustomEditor(typeof(RuntimeExample))]
-    public class EditorExample : Editor
+    public class EditorExample : UnityEditor.Editor
     {
         /// <summary>
         /// An example of a member variable, used to display in the inspector.
