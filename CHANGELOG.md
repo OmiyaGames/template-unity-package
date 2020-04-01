@@ -1,5 +1,9 @@
 # Change Log:
 
+## 1.0.2
+
+- Typo: renaming `Documentation~/index.md` to [`Documentation~/Template.md`](/Documentation~/Template.md) to match Unity recommendation.
+
 ## 1.0.1
 
 - Bug fix: [`Editor/EditorExample.cs`](/Editor/EditorExample.cs) now compiles properly.
