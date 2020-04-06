@@ -1,6 +1,9 @@
 using UnityEngine;
+using NUnit.Framework;
+using UnityEngine.TestTools;
 using UnityEditor;
 using UnityEditor.AnimatedValues;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace OmiyaGames.Template.Editor.Tests
@@ -52,12 +55,36 @@ namespace OmiyaGames.Template.Editor.Tests
     ///   <description>Taro</description>
     ///   <description>Initial verison</description>
     /// </item>
+    /// <item>
+    ///   <description>4/5/2020</description>
+    ///   <description>Taro</description>
+    ///   <description>Updated with proper example.</description>
+    /// </item>
     /// </list>
     /// </remarks>
-    /// 
-    /// FIXME: Look into how to actually setup editor tests in Unity.
     [CustomEditor(typeof(RuntimeExample))]
     public class EditorExampleTest
     {
+        /// <summary>
+        /// A Test behaves as an ordinary method
+        /// </summary>
+        [Test]
+        public void TestEditorExampleSimplePasses()
+        {
+            // Use the Assert class to test conditions
+        }
+
+        /// <summary>
+        /// A UnityTest behaves like a coroutine in Play Mode.
+        /// In Edit Mode you can use the following line to skip a frame:
+        /// <code>yield return null;</code>
+        /// </summary>
+        [UnityTest]
+        public IEnumerator TestEditorExampleWithEnumeratorPasses()
+        {
+            // Use the Assert class to test conditions.
+            // Use yield to skip a frame.
+            yield return null;
+        }
     }
 }
