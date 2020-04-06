@@ -5,8 +5,8 @@
   "unity": "2019.3",
   "unityRelease": "7f1",
   "description": "This is a template package, used as a basis to build a bigger one.",
-  "category": "Library",
-  "type": "library",
+  "category": "Tool",
+  "type": "tool",
   "license": "MIT",
   "author": {
     "name": "Taro Omiya",
@@ -19,7 +19,8 @@
   "keywords": [
     "Omiya Games",
     "Scripts",
-    "Library"
+    "Template",
+    "Tool"
   ],
   "samples": [
     {
