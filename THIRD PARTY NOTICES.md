@@ -1,3 +1,5 @@
+* Note: below is just an example of how one might denote what third-party tools are being utilized.*
+
 This package borrows code from various different sources, including:
 
 # Component: A Third-Party Component

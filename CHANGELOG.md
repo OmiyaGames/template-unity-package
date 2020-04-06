@@ -1,5 +1,12 @@
 # Change Log:
 
+## 1.2.0
+
+- Feature: Updated the [`Tests`](/Tests) assembly definition files and example scripts with proper configuration for editing/creating new unit test scripts. Also updated [`package.json`](/package.json) with NUnit as a required dependency.
+- Enhancement: Added significantly more information in [`README.md`](/README.md) so other people can use a more fleshed-out markdown format to start their documentation.
+- Enhancement: Changing [`package.json`](/package.json) into a type -> Tool, and added one more keyword.
+- Enhancement: Noting [`THIRD PARTY NOTICES.md`](/THIRD%20PARTY%20NOTICES.md) is just an example, and this project doesn't actually use any 3rd party tools yet (besides unit testing, but I think that's already implied).
+
 ## 1.1.0
 
 - Feature: adding a [`Documentation~/Doxyfile`](/Documentation~/Doxyfile) to make generating [Doxygen](http://doxygen.nl/) files a little easier.
