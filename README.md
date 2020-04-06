@@ -2,7 +2,7 @@
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I51KS8F)
 
-**Template Unity Package** is a Github template for starting a new Unity package.  A tutorial on how to utilize this template is described in @japtar10101's blog: [*How to Split Up an Existing Unity Git Project into Smaller Unity Packages*](https://www.taroomiya.com/2020/04/04/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/).
+**Template Unity Package** is a Github template for starting a new Unity package.  A tutorial on how to utilize this template is described on [Taro Omiya's](https://github.com/japtar10101) blog: [*How to Split Up an Existing Unity Git Project into Smaller Unity Packages*](https://www.taroomiya.com/2020/04/04/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/).
 
 ## Install
 
