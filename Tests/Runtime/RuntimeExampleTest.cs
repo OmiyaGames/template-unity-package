@@ -1,4 +1,7 @@
 using UnityEngine;
+using NUnit.Framework;
+using UnityEngine.TestTools;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace OmiyaGames.Template.Tests
@@ -46,15 +49,34 @@ namespace OmiyaGames.Template.Tests
     ///   <description>Description</description>
     /// </listheader>
     /// <item>
-    ///   <description>12/31/2019</description>
+    ///   <description>4/5/2020</description>
     ///   <description>Taro</description>
-    ///   <description>Initial verison</description>
+    ///   <description>Updated with proper example.</description>
     /// </item>
     /// </list>
     /// </remarks>
-    /// 
-    /// FIXME: Look into how to actually setup tests in Unity.
     public class RuntimeExampleTest
     {
+        /// <summary>
+        /// A Test behaves as an ordinary method
+        /// </summary>
+        [Test]
+        public void TestRuntimeExampleSimplePasses()
+        {
+            // Use the Assert class to test conditions
+        }
+
+        /// <summary>
+        /// A UnityTest behaves like a coroutine in Play Mode.
+        /// In Edit Mode you can use the following line to skip a frame:
+        /// <code>yield return null;</code>
+        /// </summary>
+        [UnityTest]
+        public IEnumerator TestListSetWithEnumeratorPasses()
+        {
+            // Use the Assert class to test conditions.
+            // Use yield to skip a frame.
+            yield return null;
+        }
     }
 }
