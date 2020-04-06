@@ -9,7 +9,7 @@ using System.Collections.Generic;
 namespace OmiyaGames.Template.Editor.Tests
 {
     ///-----------------------------------------------------------------------
-    /// <copyright file="EditorExampleTest.cs" company="Omiya Games">
+    /// <copyright file="TestEditorExample.cs" company="Omiya Games">
     /// The MIT License (MIT)
     /// 
     /// Copyright (c) 2019-2020 Omiya Games
@@ -39,8 +39,7 @@ namespace OmiyaGames.Template.Editor.Tests
     /// This is an example script for testing a package's editor script.
     /// </summary>
     /// 
-    /// <seealso cref="RuntimeExample"/>
-    /// <seealso cref="EditorExampleTest"/>
+    /// <seealso cref="EditorExample"/>
     /// 
     /// <remarks>
     /// Revision History:
@@ -62,7 +61,7 @@ namespace OmiyaGames.Template.Editor.Tests
     /// </item>
     /// </list>
     /// </remarks>
-    public class EditorExampleTest
+    public class TestEditorExample
     {
         /// <summary>
         /// A Test behaves as an ordinary method

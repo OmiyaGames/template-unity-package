@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace OmiyaGames.Template.Tests
 {
     ///-----------------------------------------------------------------------
-    /// <copyright file="RuntimeExampleTest.cs" company="Omiya Games">
+    /// <copyright file="TestRuntimeExample.cs" company="Omiya Games">
     /// The MIT License (MIT)
     /// 
     /// Copyright (c) 2019-2020 Omiya Games
@@ -37,7 +37,6 @@ namespace OmiyaGames.Template.Tests
     /// This is an example script for testing a package's runtime script.
     /// </summary>
     /// 
-    /// <seealso cref="EditorExample"/>
     /// <seealso cref="RuntimeExample"/>
     /// 
     /// <remarks>
@@ -55,7 +54,7 @@ namespace OmiyaGames.Template.Tests
     /// </item>
     /// </list>
     /// </remarks>
-    public class RuntimeExampleTest
+    public class TestRuntimeExample
     {
         /// <summary>
         /// A Test behaves as an ordinary method
@@ -72,7 +71,7 @@ namespace OmiyaGames.Template.Tests
         /// <code>yield return null;</code>
         /// </summary>
         [UnityTest]
-        public IEnumerator TestListSetWithEnumeratorPasses()
+        public IEnumerator TestRuntimeExampleEnumeratorPasses()
         {
             // Use the Assert class to test conditions.
             // Use yield to skip a frame.
