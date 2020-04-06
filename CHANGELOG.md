@@ -1,5 +1,12 @@
 # Change Log:
 
+## 1.2.1
+
+- Rename: `EditorExampleTest.cs` to [`TestEditorExample.cs`](/Tests/Editor/TestEditorExample.cs). Updated class name along with it.
+- Rename: `RuntimeExampleTest.cs` to [`TestRuntimeExample.cs`](/Tests/Editor/TestRuntimeExample.cs). Updated class name along with it.
+- Typo: Removed `[CustomEditor(typeof(RuntimeExample))]` attribute from [`EditorExampleTest.cs`](/Tests/Editor/TestEditorExample.cs). It serves no purpose.
+- Typo: Removed `[CustomEditor(typeof(RuntimeExample))]` attribute from [`EditorExampleTest.cs`](/Tests/Editor/TestEditorExample.cs). It serves no purpose.
+
 ## 1.2.0
 
 - Feature: Updated the [`Tests`](/Tests) assembly definition files and example scripts with proper configuration for editing/creating new unit test scripts. Also updated [`package.json`](/package.json) with NUnit as a required dependency.

@@ -1,13 +1,15 @@
 using UnityEngine;
 using NUnit.Framework;
 using UnityEngine.TestTools;
+using UnityEditor;
+using UnityEditor.AnimatedValues;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace OmiyaGames.Template.Tests
+namespace OmiyaGames.Template.Editor.Tests
 {
     ///-----------------------------------------------------------------------
-    /// <copyright file="RuntimeExampleTest.cs" company="Omiya Games">
+    /// <copyright file="TestEditorExample.cs" company="Omiya Games">
     /// The MIT License (MIT)
     /// 
     /// Copyright (c) 2019-2020 Omiya Games
@@ -34,11 +36,10 @@ namespace OmiyaGames.Template.Tests
     /// <date>12/31/2019</date>
     ///-----------------------------------------------------------------------
     /// <summary>
-    /// This is an example script for testing a package's runtime script.
+    /// This is an example script for testing a package's editor script.
     /// </summary>
     /// 
     /// <seealso cref="EditorExample"/>
-    /// <seealso cref="RuntimeExample"/>
     /// 
     /// <remarks>
     /// Revision History:
@@ -49,19 +50,24 @@ namespace OmiyaGames.Template.Tests
     ///   <description>Description</description>
     /// </listheader>
     /// <item>
+    ///   <description>12/31/2019</description>
+    ///   <description>Taro</description>
+    ///   <description>Initial verison</description>
+    /// </item>
+    /// <item>
     ///   <description>4/5/2020</description>
     ///   <description>Taro</description>
     ///   <description>Updated with proper example.</description>
     /// </item>
     /// </list>
     /// </remarks>
-    public class RuntimeExampleTest
+    public class TestEditorExample
     {
         /// <summary>
         /// A Test behaves as an ordinary method
         /// </summary>
         [Test]
-        public void TestRuntimeExampleSimplePasses()
+        public void TestEditorExampleSimplePasses()
         {
             // Use the Assert class to test conditions
         }
@@ -72,7 +78,7 @@ namespace OmiyaGames.Template.Tests
         /// <code>yield return null;</code>
         /// </summary>
         [UnityTest]
-        public IEnumerator TestListSetWithEnumeratorPasses()
+        public IEnumerator TestEditorExampleWithEnumeratorPasses()
         {
             // Use the Assert class to test conditions.
             // Use yield to skip a frame.
