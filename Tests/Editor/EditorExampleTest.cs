@@ -62,7 +62,6 @@ namespace OmiyaGames.Template.Editor.Tests
     /// </item>
     /// </list>
     /// </remarks>
-    [CustomEditor(typeof(RuntimeExample))]
     public class EditorExampleTest
     {
         /// <summary>
