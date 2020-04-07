@@ -4,7 +4,9 @@
         "OmiyaGames.Template",
         "OmiyaGames.Template.Editor"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
