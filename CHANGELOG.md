@@ -1,5 +1,9 @@
 # Change Log:
 
+## 1.2.2
+
+- Enhancement: making the platform [`OmiyaGames.Template.Editor.asmdef`](/Editor/OmiyaGames.Template.Editor.asmdef) and [`OmiyaGames.Template.Editor.Tests.asmdef`](/Tests/Editor/OmiyaGames.Template.Editor.Tests.asmdef) supports to only the editor.
+
 ## 1.2.1
 
 - Rename: `EditorExampleTest.cs` to [`TestEditorExample.cs`](/Tests/Editor/TestEditorExample.cs). Updated class name along with it.
