@@ -1,8 +1,7 @@
 {
-    "name": "OmiyaGames.Template.Editor.Tests",
+    "name": "OmiyaGames.DomainList.Editor",
     "references": [
-        "OmiyaGames.Template",
-        "OmiyaGames.Template.Editor"
+        "OmiyaGames.DomainList"
     ],
     "includePlatforms": [
         "Editor"
@@ -13,8 +12,5 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
-    "optionalUnityReferences": [
-        "TestAssemblies"
-    ]
+    "versionDefines": []
 }

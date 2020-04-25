@@ -1,10 +1,10 @@
 {
-  "name": "com.omiyagames.template",
-  "displayName": "Omiya Games - Template Unity Package",
+  "name": "com.omiyagames.domainlist",
+  "displayName": "Omiya Games - Domain List",
   "version": "0.1.0-preview.1",
   "unity": "2019.3",
-  "unityRelease": "7f1",
-  "description": "This is a template package, used as a basis to build a bigger one.",
+  "unityRelease": "10f1",
+  "description": "Tools for creating an encrypted binary asset storing a list of strings, such as a list of acceptable web host domains.",
   "category": "Tool",
   "type": "tool",
   "license": "MIT",
@@ -13,14 +13,28 @@
     "email": "support@omiyagames.com",
     "url": "https://www.omiyagames.com"
   },
-  "dependencies": {
-    "com.unity.ext.nunit": "1.0.0"
-  },
   "keywords": [
     "Omiya Games",
-    "Scripts",
-    "Template",
+    "Security",
+    "Asset",
+    "Binary",
+    "Encrypted",
     "Tool"
+  ],
+  "dependencies": {
+    "com.unity.ext.nunit": "1.0.0",
+    "com.omiyagames.common": "0.1.2-preview.1",
+    "com.omiyagames.cryptography": "0.1.0-preview.1"
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.omiyagames.common",
+        "com.openupm"
+      ]
+    }
   ],
   "samples": [
     {
