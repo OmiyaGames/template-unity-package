@@ -1,8 +1,6 @@
 {
-    "name": "OmiyaGames.DomainList.Tests",
-    "references": [
-        "OmiyaGames.DomainList"
-    ],
+    "name": "OmiyaGames.Template",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -10,8 +8,5 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
-    "optionalUnityReferences": [
-        "TestAssemblies"
-    ]
+    "versionDefines": []
 }
