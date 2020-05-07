@@ -1,4 +1,4 @@
-name: Example documentation
+name: Host DocFX Documentation
 
 on:
   push:
@@ -18,10 +18,13 @@ jobs:
       - name: Install DocFX
         run: choco install -y docfx
 
+      # Taro Omiya here, I want to keep the README.md and index.md separated
       - name: Build
-        run: |
-          cp README.md Documentation/index.md
-          docfx Documentation/docfx.json
+        run: docfx Documentation~/docfx.json
+      # - name: Build
+      #   run: |
+      #     cp README.md Documentation~/index.md
+      #     docfx Documentation~/docfx.json
 
       # Upload the generated documentation
       - name: Upload site artifact

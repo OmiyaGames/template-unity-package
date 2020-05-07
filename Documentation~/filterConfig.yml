@@ -1,6 +1,9 @@
 apiRules:
 - include:
-    uidRegex: ^DocFxForUnity
+    uidRegex: ^OmiyaGames\.Template$
+    type: Namespace
+- include:
+    uidRegex: ^OmiyaGames\.Template\.Editor$
     type: Namespace
 - include:
     uidRegex: ^Global
