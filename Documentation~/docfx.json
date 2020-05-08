@@ -4,7 +4,7 @@
             "src": [
                 {
                     "src": "..",
-                    "files": [ "**.csproj" ]
+                    "files": [ "**.cs" ]
                 }
             ],
             "globalNamespaceId": "Global",
@@ -15,7 +15,7 @@
     "build": {
         "globalMetadata": {
             "_appTitle": "Template Unity Package documentation",
-            "_appFooter": "© 2020 Omiya Games",
+            "_appFooter": "Copyright © 2020 Omiya Games",
             "_enableSearch": true
         },
         "content": [
@@ -36,7 +36,7 @@
         "overwrite": [
             {
                 "src": "..",
-                "files": [ "Assets/Scripts/**/*.md" ]
+                "files": [ "Runtime/**/*.md", "Editor/**/*.md" ]
             }
         ],
         "resource": [
