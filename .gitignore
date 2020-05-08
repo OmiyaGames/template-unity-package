@@ -72,3 +72,5 @@ VSCode/*
 *_backup.meta
 *.~*#*
 /_site
+*/obj/*
+Documentation~/api/*
