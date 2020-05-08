@@ -1,4 +1,6 @@
-- name: Coniunctis nec qui
-  href: coniunctis.md
-- name: Etiam nantemque exul
-  href: etiam.md
+- name: Customizing Package Files
+  href: customizePackage.md
+- name: Customizing Importable Assets
+  href: customizeSamples.md
+- name: Customizing Documentation
+  href: customizeDocumentation.md
