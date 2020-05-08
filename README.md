@@ -13,9 +13,12 @@ This package uses [DocFX](https://dotnet.github.io/docfx/) and Github Actions to
 
 There are two common methods for installing this package.
 
-### Through Unity Package Manager
+### Through [Unity Package Manager](https://docs.unity3d.com/Manual/upm-ui-giturl.html)
 
-Unity's own Package Manager supports importing packages via the URL to a Git repository.  Just click on the + button on the upper-left-hand corner of the Package Manager, select Git URL, then enter this package's HTTPS Github URL!
+Unity's own Package Manager supports [importing packages through a URL to a Git repo](https://docs.unity3d.com/Manual/upm-ui-giturl.html):
+
+1. First, on this repository page, click the "Clone or download" button, and copy over this repository's HTTPS URL.  
+2. Then click on the + button on the upper-left-hand corner of the Package Manager, select "Add package from git URL..." on the context menu, then paste this repo's URL!
 
 While easy and straightforward, this method has a few major downside: it does not support dependency resolution and package upgrading when a new version is released.  To add support for that, the following method is recommended:
 
@@ -23,11 +26,11 @@ While easy and straightforward, this method has a few major downside: it does no
 
 Installing via [OpenUPM's command line tool](https://openupm.com/) is recommended because it supports dependency resolution, upgrading, and downgrading this package.  Given this package is just an example, thought, it hadn't been added into OpenUPM yet.  So the rest of these instructions are hypothetical...for now...
 
-To [install OpenUPM](https://openupm.com/docs/getting-started.html#installing-openupm-cli) (if you haven't already) make sure Node.js is installed in your system first, then run:
+If you haven't already [installed OpenUPM](https://openupm.com/docs/getting-started.html#installing-openupm-cli), you can do so through Node.js's `npm` (obviously have Node.js installed in your system first):
 ```
 npm install -g openupm-cli
 ```
-To install this package, just run:
+Then, to install this package, just run the following command at the root of your Unity project:
 ```
 openupm add com.omiyagames.template
 ```
