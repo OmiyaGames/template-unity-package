@@ -1,6 +1,9 @@
 apiRules:
 - include:
-    uidRegex: ^OmiyaGames\.Template
+    uidRegex: ^OmiyaGames\.Template$
+    type: Namespace
+- include:
+    uidRegex: ^OmiyaGames\.Template\.Editor$
     type: Namespace
 - include:
     uidRegex: ^Global
