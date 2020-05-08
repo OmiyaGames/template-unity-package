@@ -1,12 +1,13 @@
 using UnityEngine;
-using NUnit.Framework;
 using UnityEngine.TestTools;
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace OmiyaGames.Template.Tests
 {
     ///-----------------------------------------------------------------------
+    /// <remarks>
     /// <copyright file="TestRuntimeExample.cs" company="Omiya Games">
     /// The MIT License (MIT)
     /// 
@@ -30,30 +31,43 @@ namespace OmiyaGames.Template.Tests
     /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     /// THE SOFTWARE.
     /// </copyright>
-    /// <author>Taro Omiya</author>
-    /// <date>12/31/2019</date>
+    /// <list type="table">
+    /// <listheader>
+    /// <term>Revision</term>
+    /// <description>Description</description>
+    /// </listheader>
+    /// <item>
+    /// <term>
+    /// <strong>Version:</strong> 1.0.0<br/>
+    /// <strong>Date:</strong> 12/31/2019<br/>
+    /// <strong>Author:</strong> Taro Omiya
+    /// </term>
+    /// <description>Initial verison.</description>
+    /// </item>
+    /// <item>
+    /// <term>
+    /// <strong>Version:</strong> 1.2.0<br/>
+    /// <strong>Date:</strong> 4/5/2020<br/>
+    /// <strong>Author:</strong> Taro Omiya
+    /// </term>
+    /// <description>Updated with proper example.</description>
+    /// </item>
+    /// <item>
+    /// <term>
+    /// <strong>Version:</strong> 1.3.0<br/>
+    /// <strong>Date:</strong> 5/7/2019<br/>
+    /// <strong>Author:</strong> Taro Omiya
+    /// </term>
+    /// <description>Updated documentation to support DocFX.</description>
+    /// </item>
+    /// </list>
+    /// </remarks>
     ///-----------------------------------------------------------------------
     /// <summary>
     /// This is an example script for testing a package's runtime script.
     /// </summary>
-    /// 
     /// <seealso cref="RuntimeExample"/>
-    /// 
-    /// <remarks>
-    /// Revision History:
-    /// <list type="table">
-    /// <listheader>
-    ///   <description>Date</description>
-    ///   <description>Author</description>
-    ///   <description>Description</description>
-    /// </listheader>
-    /// <item>
-    ///   <description>4/5/2020</description>
-    ///   <description>Taro</description>
-    ///   <description>Updated with proper example.</description>
-    /// </item>
-    /// </list>
-    /// </remarks>
+    /// <seealso cref="Editor.EditorExample"/>
     public class TestRuntimeExample
     {
         /// <summary>
