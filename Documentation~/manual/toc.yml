@@ -1,6 +1,8 @@
 - name: Customizing Package Files
   href: customizePackage.md
-- name: Customizing Importable Assets
+- name: Adding Source Code and Assets
+  href: customizeSource.md
+- name: Adding Importable Assets
   href: customizeSamples.md
 - name: Customizing Documentation
   href: customizeDocumentation.md

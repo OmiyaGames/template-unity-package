@@ -1,50 +1,52 @@
-# Coniunctis nec qui et lanient monticolae vitae
+# Customizing Package
 
-## Opem ille
+This part of the manual pertains to the following folders and files:
 
-Lorem markdownum cavis exululat inutile. Illi quem caeli, vola patruo difficili
-Iuppiter Patraeque, est ardebant ingeniis Troica intus Amore tibi mirantem
-superfusis, multum.
+```
+<root>
+  ├── package.json
+  ├── README.md
+  ├── CHANGELOG.md
+  ├── LICENSE.md
+  ├── THIRD PARTY NOTICES.md
+  └── .gitignore
+```
 
-1. Ut Achilles
-2. Et sitim
-3. Tibi modo ait temptant crinita daret
-4. Pariter in removi offensasque Lenaeo damno terra
+Per [Unity's documentation](https://docs.unity3d.com/Manual/CustomPackages.html), technically, the only required file in this section is `package.json`.  Nonetheless, this template follows the standard set by [Unity's documentation](https://docs.unity3d.com/Manual/cus-layout.html) to keep things consistent with other packages.  Plus, filling out the following files should help other developers better understand the purpose of the package:
 
-Phoebes ut damnosa classis ignes templo; tua ulla capillos ultima. Videre
-percusso plectro templa fuit diva minimum debere, quid nomen Philomela animis.
-Verbis istis flagrat vulnera inpediique ignes. Gravi filo obvius arte Amphionis
-Panes emisitque iubet.
+### Package Manifest - [`package.json`](https://docs.unity3d.com/Manual/upm-manifestPkg.html)
 
-## Latona te timens
+FIXME: Describe file roles, what needs renaming, content edit, etc!
+FIXME: Link to source code and samples documentation.
 
-Latentia ante, eundem meritorum *sunto*! Elige in timuit templa ferrea, qui arma
-ligati stagnum turbant. Fraternaque aeternus, dedisse, naufragus corripiens
-ranas Amathunta et quod laetior culpa nec semper scorpius fuit vicem corpora
-ardere. Fallit in artus primordia, fratres **per aliis**, ipsi manu **Asiae quod
-marmorea**.
+This file is required; it should not be deleted, moved, or renamed.
 
-    mountain(googleVga, pngIphone);
-    var radcabBitrate = dnsCronRecursion;
-    gui(2);
-    ipImageAix += vle(drm_cisc, horizontal + computer_key);
-    jre(vaporware_adc_multi);
+### ReadMe - `README.md`
 
-## Lumina ut tamen praesentia vidistis nymphae auroque
+FIXME: Describe file roles, what needs renaming, content edit, etc!
 
-Bromumque **in** portant furorem. Visa init **resurgere** praevitiat canibus et,
-dedignata turea, ilia.
+It is recommended not to delete, move, or rename this file.
 
-> Pisenore mensura insula aere nec per o gladium causa: Alcidae. Veris sentes
-> pallet, alta melius nostra amborum probant, deam. Iuventae dedimus nitidaque
-> hunc traxisse sermonibus [pectine flecti](http://fulmen-seu.org/illam.aspx) an
-> pateres, hac ore gelidis foret semper. Sithon pelle.
+### Package License - `LICENSE.md`
 
-Bracchia Hippason videntur fateri hosti: palpitat animo est reliquit anne nam
-confusaque. Interea rex altis munera quem quae quoque rorant, rauco albescere
-scopulo moriensque parvo, pectus illa, quadrupedes.
+FIXME: Describe file roles, what needs renaming, content edit, etc!
 
-Notavit haec. Vertit pars quem Euryte casu usta iterum! Ablatum pectus
-corripiunt neu humus tamquam; ducens stellarum amore. Pulsisque latet, ad tamen
-victor fulva Tirynthius posco; qui inque in poena quidem
-[enses](http://gentisque-togaque.io/)!
+It is recommended not to delete, move, or rename this file.
+
+### Other Third-Party Licenses - `THIRD PARTY NOTICES.md`
+
+FIXME: Describe file roles, what needs renaming, content edit, etc!
+
+This file may be deleted if this package does not use any resources from third-parties.
+
+### Change Log - `CHANGELOG.md`
+
+FIXME: Describe file roles, what needs renaming, content edit, etc!
+
+It is recommended not to delete, move, or rename this file.
+
+### Ignore File - [`.gitignore`](https://git-scm.com/docs/gitignore#_pattern_format)
+
+The file indicating to the Git version control what files to ignore when reviewing any changes to the project.  The default content held in this project should be fine for most users.  That said, if changes needs to be made, the official documentation on formatting `.gitignore` is available [here](https://git-scm.com/docs/gitignore#_pattern_format).
+
+It is recommended not to delete, move, or rename this file.

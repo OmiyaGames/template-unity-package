@@ -19,19 +19,19 @@ The project follows [Unity's recommend file and folder format](https://docs.unit
   ├── LICENSE.md
   ├── THIRD PARTY NOTICES.md
   ├── .gitignore
-  ├── Editor
-  │   ├── OmiyaGames.Template.Editor.asmdef
-  │   └── EditorExample.cs
   ├── Runtime
   │   ├── OmiyaGames.Template.asmdef
   │   └── RuntimeExample.cs
-  ├── Tests
-  │   ├── Editor
-  │   │   ├── OmiyaGames.Template.Editor.Tests.asmdef
-  │   │   └── EditorExampleTest.cs
-  │   └── Runtime
-  │        ├── OmiyaGames.Template.Tests.asmdef
-  │        └── RuntimeExampleTest.cs
+  ├── Editor
+  │   ├── OmiyaGames.Template.Editor.asmdef
+  │   └── EditorExample.cs
+  └── Tests
+  │   ├── Runtime
+  │   │   ├── OmiyaGames.Template.Tests.asmdef
+  │   │   └── RuntimeExampleTest.cs
+  │   └── Editor
+  │       ├── OmiyaGames.Template.Editor.Tests.asmdef
+  │       └── EditorExampleTest.cs
   ├── Samples~
   │   └── Example1
   │       └── Example.txt
@@ -48,16 +48,28 @@ The project follows [Unity's recommend file and folder format](https://docs.unit
   |    |   ├── customizeSamples.md
   |    |   └── README.md
   |    └── resources
+  |        ├── preview.png
   |        └── README.md
   └── .github
       └── workflows
           └── documentation.yml
 ```
 
+Note that this sprawling list of files contains a large number of common, human-readable (i.e. non-code, data-storing) text formats.  If some of these file extensions are unfamiliar, the following resources describes how to edit and format the most common text files used in this project:
+
+- [JSON (`*.json, *.asmdef`)](https://www.json.org/json-en.html)
+    - Although the [Wikipedia page](https://en.wikipedia.org/wiki/JSON#Data_types_and_syntax) might be easier understand.
+- [YAML (`*.yml`)](https://yaml.org/spec/1.2/spec.html#Preview)
+    - Again, the [Wikipedia page](https://en.wikipedia.org/wiki/YAML#Syntax).
+- [Markdown (`*.md`)](https://www.markdownguide.org/getting-started/)
+    - They also provide [a cheatsheet](https://www.markdownguide.org/cheat-sheet)!
+- [Bonus: `.gitignore`](https://git-scm.com/docs/gitignore#_pattern_format)
+
 As many of these files are intended to be edited and/or renamed, this manual has been split up into three parts.  The links below briefly covers how to update this package's files for your own package development.
 
 - [Customizing Package Files](https://omiyagames.github.io/template-unity-package/manual/customizePackage.html)
-- [Customizing Importable Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html)
+- [Adding Source Code and Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSource.html)
+- [Adding Importable Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html)
 - [Customizing Documentation](https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html)
 
 ## Other Resources
