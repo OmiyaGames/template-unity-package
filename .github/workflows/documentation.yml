@@ -18,9 +18,12 @@ jobs:
       - name: Install DocFX
         run: choco install -y docfx
 
-      # Taro Omiya here, I want to keep the README.md and index.md separated
+      # Taro Omiya here, want to copy a different file instead of README
       - name: Build
-        run: docfx Documentation~/docfx.json
+        run: |
+          cp CHANGELOG.md Documentation~/manual/changelog.md
+          docfx Documentation~/docfx.json
+      # Below is the original instructions by Erwan Normand
       # - name: Build
       #   run: |
       #     cp README.md Documentation~/index.md
