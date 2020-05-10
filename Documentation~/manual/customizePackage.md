@@ -22,7 +22,7 @@ The Package Manifest file is a text file in JSON format storing details about th
 
 #### `name`
 ```
-  "name": "com.omiyagames.template",
+"name": "com.omiyagames.template",
 ```
 This field is required, and *must* be changed.
 
@@ -30,7 +30,7 @@ The `name` field is a unique identifier differentiating this package from potent
 
 #### `version`
 ```
-  "version": "0.1.0-preview.1",
+"version": "0.1.0-preview.1",
 ```
 This field is required.  Changing it is recommended, but not necessary.
 
@@ -38,7 +38,7 @@ The `version` field informs the Unity Package Manager what version this package 
 
 #### `displayName`
 ```
-  "displayName": "Omiya Games - Template Unity Package",
+"displayName": "Omiya Games - Template Unity Package",
 ```
 While technically not required, this field should kept, and more importantly, *changed.*
 
@@ -46,7 +46,7 @@ When the Unity Package Manager displays the name of this package, `displayName` 
 
 #### `description`
 ```
-  "description": "This is a template package, used as a basis to build a bigger one.",
+"description": "This is a template package, used as a basis to build a bigger one.",
 ```
 While technically not required, this field should kept, and more importantly, *changed.*
 
@@ -54,7 +54,7 @@ When the Unity Package Manager displays a description of this package when selec
 
 #### `unity`
 ```
-  "unity": "2019.3",
+"unity": "2019.3",
 ```
 While technically not required, this field should kept.  Changing it is recommended, but not necessary.
 
@@ -62,7 +62,7 @@ Indicates the lowest version of Unity this package supports.  If patch release i
 
 #### `type`
 ```
-  "type": "tool",
+"type": "tool",
 ```
 Optional, and only used internally as of this writing.  Changing it is recommended, but not necessary.
 
@@ -78,9 +78,9 @@ Per [Unity's documentation](https://docs.unity3d.com/Manual/CustomPackages.html)
 
 #### `dependencies`
 ```
-  "dependencies": {
-    "com.unity.ext.nunit": "1.0.0"
-  },
+"dependencies": {
+  "com.unity.ext.nunit": "1.0.0"
+},
 ```
 This field is optional, and if this package does not contain any code or plugins, can be safely removed.  If it *does*, this field should be updated to the code's requirements.
 
@@ -90,13 +90,13 @@ As this field is critical for adding compiling source code to the package, more 
 
 #### `samples`
 ```
-  "samples": [
-    {
-      "displayName": "Example 1",
-      "description": "This sample is just an example",
-      "path": "Samples~/Example1"
-    }
-  ]
+"samples": [
+  {
+    "displayName": "Example 1",
+    "description": "This sample is just an example",
+    "path": "Samples~/Example1"
+  }
+]
 ```
 This field is optional, and if this package does not contain assets users can import, can be safely removed.  If it *does*, this field should be changed to the package's director setup.
 

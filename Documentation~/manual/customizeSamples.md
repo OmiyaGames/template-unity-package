@@ -36,13 +36,13 @@ The Package Manifest file is a text file in JSON format storing details about th
 
 ### `samples`
 ```
-  "samples": [
-    {
-      "displayName": "Example 1",
-      "description": "This sample is just an example",
-      "path": "Samples~/Example1"
-    }
-  ]
+"samples": [
+  {
+    "displayName": "Example 1",
+    "description": "This sample is just an example",
+    "path": "Samples~/Example1"
+  }
+]
 ```
 This field is optional, and if this package does not contain any importable assets, can be safely removed.  If it *does*, this field should be updated.
 
@@ -54,17 +54,17 @@ As the name implies, `samples` is the details of each group of importable assets
 
 If, for example, there are two sample folders, `Samples~/Required` and `Samples~/Examples`, this field could be edited as follows:
 ```
-  "samples": [
-    {
-      "displayName": "Required Assets",
-      "description": "Assets required to make this package work",
-      "path": "Samples~/Required"
-    },
-    {
-      "displayName": "Examples",
-      "description": "Examples assets that demonstrates how this package works.",
-      "path": "Samples~/Examples"
-    }
-  ]
+"samples": [
+  {
+    "displayName": "Required Assets",
+    "description": "Assets required to make this package work",
+    "path": "Samples~/Required"
+  },
+  {
+    "displayName": "Examples",
+    "description": "Examples assets that demonstrates how this package works.",
+    "path": "Samples~/Examples"
+  }
+]
 ```
 As of this writing, this field is not documented in Unity's official documentation yet.  Most likely, it means this field is still in experimental phases, and may change in the future.

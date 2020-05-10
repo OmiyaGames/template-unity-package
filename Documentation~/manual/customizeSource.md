@@ -36,18 +36,18 @@ This section will only focus on one field: defining this package's dependencies.
 
 #### `dependencies`
 ```
-  "dependencies": {
-    "com.unity.ext.nunit": "1.0.0"
-  },
+"dependencies": {
+  "com.unity.ext.nunit": "1.0.0"
+},
 ```
 This field is optional, and if this package does not contain any code or plugins, can be safely removed.  If it *does*, this field should be updated to the code's requirements.
 
 As the name implies, `dependencies` is a list of packages this project relies on.  The list of object parameters should be listed in `"<package-unique-identifier>": "<supported-version-of-package>"`.  By default, this template lists the first version of Unity's unit testing package as a dependency.  If, for example, a developer wants to utilize the latest input system into their package, they'll need to list the identifier and version of the package like so (don't forget to add a comma between each package definition):
 ```
-  "dependencies": {
-    "com.unity.ext.nunit": "1.0.0",
-    "com.unity.inputsystem": "1.0.0"
-  },
+"dependencies": {
+  "com.unity.ext.nunit": "1.0.0",
+  "com.unity.inputsystem": "1.0.0"
+},
 ```
 As of this writing, only a specific version number can be defined for each package.  No version range is supported yet.
 
