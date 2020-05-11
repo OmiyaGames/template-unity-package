@@ -1,0 +1,61 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "src": "..",
+                    "files": [ "**.cs" ]
+                }
+            ],
+            "globalNamespaceId": "Global",
+            "filter": "filterConfig.yml",
+            "dest": "api"
+        }
+    ],
+    "build": {
+        "globalMetadata": {
+            "_appTitle": "Template Unity Package documentation",
+            "_appFooter": "Copyright © 2020 Omiya Games",
+            "_enableSearch": true
+        },
+        "content": [
+            {
+                "files": [ "toc.yml", "index.md" ]
+            },
+            {
+                "src": "api",
+                "files": [ "*.yml" ],
+                "dest": "api"
+            },
+            {
+                "src": "manual",
+                "files": [ "toc.yml", "*.md" ],
+                "dest": "manual"
+            }
+        ],
+        "overwrite": [
+            {
+                "src": "..",
+                "files": [ "Runtime/**/*.md", "Editor/**/*.md" ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [ "resources/**/*" ]
+            }
+        ],
+        "sitemap":
+        {
+            "baseUrl": "https://omiyagames.github.io/template-unity-package/",
+            "changefreq": "weekly",
+            "fileOptions": {
+                "api/*": {
+                    "changefreq": "daily"
+                }
+            }
+        },
+        "xref": [ "https://normanderwan.github.io/DocFxForUnity/Unity/xrefmap.yml" ],
+        "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+        "dest": "../_site"
+    }
+}

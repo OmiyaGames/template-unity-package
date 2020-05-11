@@ -4,6 +4,7 @@ using System.Collections.Generic;
 namespace OmiyaGames.Template
 {
     ///-----------------------------------------------------------------------
+    /// <remarks>
     /// <copyright file="RuntimeExample.cs" company="Omiya Games">
     /// The MIT License (MIT)
     /// 
@@ -27,31 +28,34 @@ namespace OmiyaGames.Template
     /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     /// THE SOFTWARE.
     /// </copyright>
-    /// <author>Taro Omiya</author>
-    /// <date>12/31/2019</date>
+    /// <list type="table">
+    /// <listheader>
+    /// <term>Revision</term>
+    /// <description>Description</description>
+    /// </listheader>
+    /// <item>
+    /// <term>
+    /// <strong>Version:</strong> 1.0.0<br/>
+    /// <strong>Date:</strong> 12/31/2019<br/>
+    /// <strong>Author:</strong> Taro Omiya
+    /// </term>
+    /// <description>Initial verison.</description>
+    /// </item>
+    /// <item>
+    /// <term>
+    /// <strong>Version:</strong> 1.3.0<br/>
+    /// <strong>Date:</strong> 5/7/2019<br/>
+    /// <strong>Author:</strong> Taro Omiya
+    /// </term>
+    /// <description>Updated documentation to support DocFX.</description>
+    /// </item>
+    /// </list>
+    /// </remarks>
     ///-----------------------------------------------------------------------
     /// <summary>
     /// This is an example script for starting a package.
     /// </summary>
-    /// 
-    /// <seealso cref="EditorExample"/>
-    /// <seealso cref="RuntimeExampleTest"/>
-    /// 
-    /// <remarks>
-    /// Revision History:
-    /// <list type="table">
-    /// <listheader>
-    ///   <description>Date</description>
-    ///   <description>Author</description>
-    ///   <description>Description</description>
-    /// </listheader>
-    /// <item>
-    ///   <description>12/31/2019</description>
-    ///   <description>Taro</description>
-    ///   <description>Initial verison</description>
-    /// </item>
-    /// </list>
-    /// </remarks>
+    /// <seealso cref="Editor.EditorExample"/>
     public class RuntimeExample : MonoBehaviour
     {
         /// <summary>
