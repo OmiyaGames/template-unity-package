@@ -5,20 +5,20 @@ This part of the manual pertains to the following folders and files:
 ```
 <root>
   ├── Documentation~
-  |    ├── index.md
-  |    ├── Doxyfile
-  |    ├── docfx.json
-  |    ├── toc.yml
-  |    ├── filterConfig.yml
-  |    ├── manual
-  |    |   ├── toc.yml
-  |    |   ├── customizeDocumentation.md
-  |    |   ├── customizePackage.md
-  |    |   ├── customizeSamples.md
-  |    |   └── README.md
-  |    └── resources
-  |        ├── preview.png
-  |        └── README.md
+  |   ├── index.md
+  |   ├── Doxyfile
+  |   ├── docfx.json
+  |   ├── toc.yml
+  |   ├── filterConfig.yml
+  |   ├── manual
+  |   |   ├── toc.yml
+  |   |   ├── customizeDocumentation.md
+  |   |   ├── customizePackage.md
+  |   |   ├── customizeSamples.md
+  |   |   └── README.md
+  |   └── resources
+  |       ├── preview.png
+  |       └── README.md
   └── .github
       └── workflows
           └── documentation.yml
