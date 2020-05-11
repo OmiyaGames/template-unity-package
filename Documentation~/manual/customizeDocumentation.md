@@ -68,7 +68,7 @@ To give Github Actions access to the package's repository, a private key must be
 
 1. If the developer hasn't done this step already, go to ["Settings -> Developer Settings -> Personal access token,"](https://github.com/settings/tokens) and generate a new token with full access to `repo`.  Don't forget to copy the secret key printed on the new entry in a safe location.
    - ![Personal Access Token](https://omiyagames.github.io/template-unity-package/resources/personalAccessToken.png)
-2. Return to the Github repository, then go to "Settings -> Secrets," and add the generated key into the list.
+2. Return to the Github repository, then go to "Settings -> Secrets," and add the generated key into the list.  Remember to name this key as, `AccessToken`.
    - ![Add Secret](https://omiyagames.github.io/template-unity-package/resources/addingSecrets.png)
 3. Finally, push the repository to the master branch to deploy the automated commands!  A new breanch, `gh-pages`, and website, `https://<username>.github.io/<repo-name>/` will be created as part of this process.
 
