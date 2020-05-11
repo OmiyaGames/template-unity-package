@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Customizing Package | Template Unity Package documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Customizing Package | Template Unity Package documentation ">
+    <meta name="generator" content="docfx 2.53.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="customizing-package">Customizing Package</h1>
+
+<p>This part of the manual pertains to the following folders and files:</p>
+<pre><code>&lt;root&gt;
+  ├── package.json
+  ├── README.md
+  ├── CHANGELOG.md
+  ├── LICENSE.md
+  ├── THIRD PARTY NOTICES.md
+  └── .gitignore
+</code></pre><p>Per <a href="https://docs.unity3d.com/Manual/CustomPackages.html">Unity&#39;s documentation</a>, technically, the only required file in this section is <code>package.json</code>.  Nonetheless, this template follows the standard set by <a href="https://docs.unity3d.com/Manual/cus-layout.html">Unity&#39;s documentation</a> to keep things consistent with other packages.  Plus, filling out the following files should help other developers better understand the purpose of the package:</p>
+<h3 id="package-manifest---packagejsonhttpsdocsunity3dcommanualupm-manifestpkghtml">Package Manifest - <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html"><code>package.json</code></a></h3>
+<p>This file is required: it should not be deleted, moved, or renamed.  That said, it <em>must</em> be edited.</p>
+<p>The Package Manifest file is a text file in JSON format storing details about the package that the Package Manager can use to display and categorize the project.  Note that this file <em>can</em> be edited inside the Unity Inspector like any other asset files, as opposed to editing it in the text editor; Unity even provides a nice UI for it.  Furthermore, Unity&#39;s <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html">own documentation</a> is quite extensive, so this section will only cover a couple of important fields:</p>
+<h4 id="name"><code>name</code></h4>
+<pre><code>&quot;name&quot;: &quot;com.omiyagames.template&quot;,
+</code></pre><p>This field is required, and <em>must</em> be changed.</p>
+<p>The <code>name</code> field is a unique identifier differentiating this package from potentially other packages with similar display names.  The string stored in this field should follow the classic <code>com.&lt;company-name&gt;.&lt;package-name&gt;</code> format.  Furthermore, it&#39;s recommended to keep the string below 50 characters in length.  For more information, check out <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html#name">Unity&#39;s documentation</a>.</p>
+<h4 id="version"><code>version</code></h4>
+<pre><code>&quot;version&quot;: &quot;0.1.0-preview.1&quot;,
+</code></pre><p>This field is required.  Changing it is recommended, but not necessary.</p>
+<p>The <code>version</code> field informs the Unity Package Manager what version this package is on.  If a service like <a href="openupm.com">OpenUPM</a> is being used, this field further informs the Package Manager if the package is in need of an update.  Unity provides a pretty thorough explanation of <a href="https://docs.unity3d.com/Manual/upm-semver.html">how this field should be filled in</a>, but the classic <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code> should suffice here.  If in preview, don&#39;t forget to add <code>-preview.&lt;patch&gt;</code> as well.</p>
+<h4 id="displayname"><code>displayName</code></h4>
+<pre><code>&quot;displayName&quot;: &quot;Omiya Games - Template Unity Package&quot;,
+</code></pre><p>While technically not required, this field should kept, and more importantly, <em>changed.</em></p>
+<p>When the Unity Package Manager displays the name of this package, <code>displayName</code> is the field it&#39;ll use.  Simply provide a human-friendly name for this package to this field.</p>
+<h4 id="description"><code>description</code></h4>
+<pre><code>&quot;description&quot;: &quot;This is a template package, used as a basis to build a bigger one.&quot;,
+</code></pre><p>While technically not required, this field should kept, and more importantly, <em>changed.</em></p>
+<p>When the Unity Package Manager displays a description of this package when selected, <code>description</code> is the field it&#39;ll use.  Simply provide a human-friendly description for this package to this field.  Note that UTF-8 characters are supported via <code>\u2603</code> and <code>\n</code>.</p>
+<h4 id="unity"><code>unity</code></h4>
+<pre><code>&quot;unity&quot;: &quot;2019.3&quot;,
+</code></pre><p>While technically not required, this field should kept.  Changing it is recommended, but not necessary.</p>
+<p>Indicates the lowest version of Unity this package supports.  If patch release info is necessary as well (e.g. Unity 2019.3.7f3), the last set of digits can be added to <code>unityRelease</code> field.</p>
+<h4 id="type"><code>type</code></h4>
+<pre><code>&quot;type&quot;: &quot;tool&quot;,
+</code></pre><p>Optional, and only used internally as of this writing.  Changing it is recommended, but not necessary.</p>
+<p>Indicates the type of this package.  As of this writing, values Unity recognizes are:</p>
+<ul>
+<li>tool</li>
+<li>library</li>
+<li>module</li>
+<li>template</li>
+<li>sample</li>
+<li>tests</li>
+</ul>
+<p>Per <a href="https://docs.unity3d.com/Manual/CustomPackages.html">Unity&#39;s documentation</a>, technically, the only required file in this section is <code>package.json</code>.  Nonetheless, this template follows the standard set by <a href="https://docs.unity3d.com/Manual/cus-layout.html">Unity&#39;s documentation</a> to keep things consistent with other packages.  Plus, filling out the following files should help other developers better understand the purpose of the package:</p>
+<h4 id="dependencies"><code>dependencies</code></h4>
+<pre><code class="lang-json">&quot;dependencies&quot;: {
+  &quot;com.unity.ext.nunit&quot;: &quot;1.0.0&quot;
+},
+</code></pre><p>This field is optional, and if this package does not contain any code or plugins, can be safely removed.  If it <em>does</em>, this field should be updated to the code&#39;s requirements.</p>
+<p>As the name implies, <code>dependencies</code> is a list of packages this project relies on.  The list of object parameters should be listed in <code>&quot;&lt;package-unique-identifier&gt;&quot;: &quot;&lt;supported-version-of-package&gt;&quot;</code>.</p>
+<p>As this field is critical for adding compiling source code to the package, more information is available at the <a href="https://omiyagames.github.io/template-unity-package/manual/customizeSource.html">Adding Source Code and Assets</a> section of this manual.</p>
+<h4 id="samples"><code>samples</code></h4>
+<pre><code class="lang-json">&quot;samples&quot;: [
+  {
+    &quot;displayName&quot;: &quot;Example 1&quot;,
+    &quot;description&quot;: &quot;This sample is just an example&quot;,
+    &quot;path&quot;: &quot;Samples~/Example1&quot;
+  }
+]
+</code></pre><p>This field is optional, and if this package does not contain assets users can import, can be safely removed.  If it <em>does</em>, this field should be changed to the package&#39;s director setup.</p>
+<p>Unity Package Manager provides an option for packages to list one or more &quot;Import to project&quot; buttons, which naturally allows the user to import assets into their project.  To specify what gets imported, the <code>samples</code> field contains a list of objects, each holding the <code>displayName</code>, <code>description</code>, and <code>path</code> (relative to the root of the package&#39;s directory) fields.</p>
+<p>As this field is critical for adding importable assets to the package, more information is available at the <a href="https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html">Adding Importable Assets</a> section of this manual.</p>
+<h3 id="readme---readmemd">ReadMe - <code>README.md</code></h3>
+<p>It&#39;s recommended to edit this file.</p>
+<p>As the name of the file implies, <code>README.md</code> is a Markdown file intended to inform first-time viewers of this package&#39;s source what the purpose of the package is, and provide guidance on maintainers where the important files are.  It has the added bonus that most online repository websites displays this Markdown file as an in-depth description of the project as a whole.</p>
+<h3 id="package-license---licensemd">Package License - <code>LICENSE.md</code></h3>
+<p>It&#39;s recommended to edit this file.</p>
+<p>As the name of the file implies, <code>LICENSE.md</code> is a Markdown file describing the license of the package overall.  It has the added bonus that some open-source-encouraging online repository websites uses this file to indicate developers the license of the project.  If there are assets borrowed from third-party sources, it is recommended to list those in <code>THIRD PARTY NOTICES.md</code>.</p>
+<h3 id="other-third-party-licenses---third-party-noticesmd">Other Third-Party Licenses - <code>THIRD PARTY NOTICES.md</code></h3>
+<p>If the package does not contain any third-party assets, this file may be safely removed.  Otherwise, it&#39;s highly recommended to edit this file.</p>
+<p><code>THIRD PARTY NOTICES.md</code> is a Markdown file that informs the reader what assets comes from third-party sources, and what the license of those assets are.</p>
+<h3 id="change-log---changelogmd">Change Log - <code>CHANGELOG.md</code></h3>
+<p>It&#39;s recommended to edit this file.</p>
+<p><code>THIRD PARTY NOTICES.md</code> is a Markdown file listing all the past versions of this package, and how the package has changed.  Each time a new release is being prepared, this file should be updated with the latest information.</p>
+<h3 id="ignore-file---gitignorehttpsgit-scmcomdocsgitignorepatternformat">Ignore File - <a href="https://git-scm.com/docs/gitignore#_pattern_format"><code>.gitignore</code></a></h3>
+<p>It&#39;s recommend to keep this file; feel free to make edits to it for your own purpose.</p>
+<p>The Git version control uses this <code>.gitignore</code> text file to determine what files to ignore when the application reviews any changes to the project.  The default content held in this project should be fine for most Unity users.  That said, if changes needs to be made, the official documentation on formatting <code>.gitignore</code> is available <a href="https://git-scm.com/docs/gitignore#_pattern_format">here</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/OmiyaGames/template-unity-package/blob/master/Documentation~/manual/customizePackage.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Omiya Games
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

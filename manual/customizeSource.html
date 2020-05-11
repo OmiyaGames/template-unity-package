@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Adding Source Code and Assets | Template Unity Package documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Adding Source Code and Assets | Template Unity Package documentation ">
+    <meta name="generator" content="docfx 2.53.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="adding-source-code-and-assets">Adding Source Code and Assets</h1>
+
+<p>This part of the manual pertains to the following folders and files:</p>
+<pre><code>&lt;root&gt;
+  ├── package.json
+  ├── Runtime
+  │   ├── OmiyaGames.Template.asmdef
+  │   └── RuntimeExample.cs
+  ├── Editor
+  │   ├── OmiyaGames.Template.Editor.asmdef
+  │   └── EditorExample.cs
+  └── Tests
+      ├── Runtime
+      │   ├── OmiyaGames.Template.Tests.asmdef
+      │   └── RuntimeExampleTest.cs
+      └── Editor
+          ├── OmiyaGames.Template.Editor.Tests.asmdef
+          └── EditorExampleTest.cs
+</code></pre><p>Per <a href="https://docs.unity3d.com/Manual/CustomPackages.html">Unity&#39;s documentation</a>, technically, the only required files in this section is <code>package.json</code> and at least one <a href="https://docs.unity3d.com/Manual/cus-asmdef.html"><code>*.asmdef</code> file</a>.  Furthermore, all folders can be customized to the developer&#39;s liking.  Nonetheless, this template follows the standard recommended by <a href="https://docs.unity3d.com/Manual/cus-layout.html">Unity</a>.</p>
+<p>Note that if the project <em>only</em> contains importable assets, the folder <code>Runtime</code>, <code>Editor</code>, <code>Tests</code>, and all their subfolders and content can be deleted safely (yes, even the <code>*.asmdef</code> files, as far as this writer is aware).  Do not forget to update the <code>package.json</code> file accordingly, as detailed below.</p>
+<p>For the sake of brevity, this section will not cover what an <a href="https://docs.unity3d.com/Manual/cus-asmdef.html">Assembly Definition (*.asmdef) file</a> is, and what purpose it holds.  It is highly recommended to review <a href="https://docs.unity3d.com/Manual/cus-asmdef.html">Unity&#39;s documentation</a> on this file.  Finally, this section will assume the developer chose not to rename the folders, although they <em>will</em> need to rename some files.</p>
+<h3 id="package-manifest---packagejsonhttpsdocsunity3dcommanualupm-manifestpkghtml">Package Manifest - <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html"><code>package.json</code></a></h3>
+<p>This file is required: it should not be deleted, moved, or renamed.  That said, it <em>must</em> be edited.</p>
+<p>The Package Manifest file is a text file in JSON format storing details about the package that the Package Manager can use to display and categorize the project.  Note that this file <em>can</em> be edited inside the Unity Inspector like any other asset files, as opposed to editing it in the text editor; Unity even provides a nice UI for it.</p>
+<p>This section will only focus on one field: defining this package&#39;s dependencies.  For more information about this file, check out Unity&#39;s <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html">own documentation</a>!</p>
+<h4 id="dependencies"><code>dependencies</code></h4>
+<pre><code class="lang-json">&quot;dependencies&quot;: {
+  &quot;com.unity.ext.nunit&quot;: &quot;1.0.0&quot;
+},
+</code></pre><p>This field is optional, and if this package does not contain any code or plugins, can be safely removed.  If it <em>does</em>, this field should be updated to the code&#39;s requirements.</p>
+<p>As the name implies, <code>dependencies</code> is a list of packages this project relies on.  The list of object parameters should be listed in <code>&quot;&lt;package-unique-identifier&gt;&quot;: &quot;&lt;supported-version-of-package&gt;&quot;</code>.  By default, this template lists the first version of Unity&#39;s unit testing package as a dependency.  If, for example, a developer wants to utilize the latest input system into their package, they&#39;ll need to list the identifier and version of the package like so (don&#39;t forget to add a comma between each package definition):</p>
+<pre><code class="lang-json">&quot;dependencies&quot;: {
+  &quot;com.unity.ext.nunit&quot;: &quot;1.0.0&quot;,
+  &quot;com.unity.inputsystem&quot;: &quot;1.0.0&quot;
+},
+</code></pre><p>As of this writing, only a specific version number can be defined for each package.  No version range is supported yet.</p>
+<p>To learn more, check out <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html#dependencies">Unity&#39;s documentation</a>!</p>
+<h2 id="runtime-folder"><code>Runtime</code> folder</h2>
+<p>This folder is intended for scripts that can be utilized when a Unity game runs.  This can include C# scripts, especially <code>MonoBehaviors</code>, <code>ScriptableObjects</code>, Attributes, and even just regular classes and structs, as well as plugins and non-editable media files (useful for defining defaults).</p>
+<p>If this package does <em>not</em> need any such files, e.g. it&#39;s purely a Unity Editor tool, this folder, its contents, and its corresponding <code>Tests/Runtime</code> folder may be dafely deleted.</p>
+<h4 id="assembly-definition---runtimeomiyagamestemplateasmdefhttpsdocsunity3dcommanualcus-asmdefhtml">Assembly Definition - <a href="https://docs.unity3d.com/Manual/cus-asmdef.html"><code>Runtime/OmiyaGames.Template.asmdef</code></a></h4>
+<p>If the entire <code>Runtime</code> folder and content isn&#39;t deleted, this file <em>must</em> be renamed and edited.</p>
+<p>This is the file that will group the source code in the <code>Runtime</code> folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package&#39;s unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  After renaming the file, the following fields in it should be updated:</p>
+<ul>
+<li><code>name</code>: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.</li>
+<li><code>references</code>: list of C# projects the source code depends on.  The name of each project should be the same as the <code>name</code> field in the Assembly Definition file in said dependencies.</li>
+<li><code>includePlatforms</code>: a list of platforms this project supports.  Keep the list empty if all platforms should be supported.</li>
+<li><code>excludePlatforms</code>: a list of platforms this project <em>does not</em> supports.  Keep the list empty if all platforms should be supported.</li>
+</ul>
+<p>Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window, or a typical text editor.  Don&#39;t forget to check out <a href="https://docs.unity3d.com/Manual/cus-asmdef.html">Unity&#39;s documentation</a> for more information on the rest of the fields in the file!</p>
+<h4 id="sample-code---runtimeruntimeexamplecs">Sample Code - <code>Runtime/RuntimeExample.cs</code></h4>
+<p>A simple <code>MonoBehavior</code> script.  Since it&#39;s obviously just a sample file, it&#39;s recommended to delete this code.</p>
+<h2 id="editor-folder"><code>Editor</code> folder</h2>
+<p>This folder is intended for scripts that customizes the Unity editor in some way, but isn&#39;t used in the game itself.  This basically means any editor C# scripts, such as <code>Editor</code>, <code>PropertyDrawers</code>, and <code>SettingsProvider</code>.  If the code has the line, <code>using UnityEditor;</code> or some variant near the top of the file, it&#39;s very much an editor script and belongs here.</p>
+<p>If this package does <em>not</em> need any such files, e.g. it&#39;s purely a Runtime tool, plugin, or a bunch of default assets, this folder and its contents may be safely deleted.</p>
+<h4 id="assembly-definition---editoromiyagamestemplateeditorasmdefhttpsdocsunity3dcommanualcus-asmdefhtml">Assembly Definition - <a href="https://docs.unity3d.com/Manual/cus-asmdef.html"><code>Editor/OmiyaGames.Template.Editor.asmdef</code></a></h4>
+<p>If the entire <code>Editor</code> folder and content isn&#39;t deleted, this file <em>must</em> be renamed and edited.</p>
+<p>This is the file that will group the source code in the <code>Editor</code> folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package&#39;s unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  If the <code>Runtime</code> folder still exists, don&#39;t forget to add <code>.Editor</code> in the file name as well to differentiate the two.  After renaming the file, the following fields in it should be updated:</p>
+<ul>
+<li><code>name</code>: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.</li>
+<li><code>references</code>: list of C# projects the source code depends on.  The name of each project should be the same as the <code>name</code> field in the Assembly Definition file in said dependencies.  If the <code>Runtime</code> folder exists, don&#39;t forget to add the <code>name</code> of the corresponding Assembly Definition files in this list as well.</li>
+</ul>
+<p>Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window, or a typical text editor.  Note that the fields, <code>includePlatforms</code> and <code>excludePlatforms</code> should already be set properly.  Don&#39;t forget to check out <a href="https://docs.unity3d.com/Manual/cus-asmdef.html">Unity&#39;s documentation</a> for more information on the rest of the fields in the file!</p>
+<h4 id="sample-code---editoreditorexamplecs">Sample Code - <code>Editor/EditorExample.cs</code></h4>
+<p>A simple <code>Editor</code> script.  Since it&#39;s obviously just a sample file, it&#39;s recommended to delete this code.</p>
+<h2 id="tests-and-its-subfolders"><code>Tests</code>, and its subfolders</h2>
+<p>This folder and its two subfolders, <code>Tests/Editor</code> and <code>Tests/Runtime</code>, is intended for any unit tests validating the functionality of scripts in the <code>Runtime</code> and <code>Editor</code> folder.  As their name implies, <code>Tests/Editor</code> runs tests in the Unity editor itself, while <code>Tests/Runtime</code> sets up a new scene to run any runtime tests.  Where possible, it&#39;s actually recommended to throw as many unit tests in the <code>Tests/Editor</code> as possible, <em>even</em> if they&#39;re testing scripts from the <code>Runtime</code> folder, so long as the tested script does not have to be attached to a <code>GameObject</code> or rely on an existence of a scene.  Tests in this subfolder runs much faster because a scene doesn&#39;t need to be setup for it.  Typically, <code>MonoBehaviors</code> and <code>Components</code> are the only scripts that are tested in the <code>Tests/Runtime</code> folder.  See <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/testing-editortestsrunner.html">Unity&#39;s documentation</a> on unit testing for more details.</p>
+<p>If there are no plans to add unit tests into this project (e.g. plugins that already have one in a separate project), it is safe to delete this folder and its content.  Alternatively, if there are no plans to run tests in the <code>Runtime</code> scope, the subfolder, <code>Tests/Runtime</code> can be safely deleted; same story for <code>Editor</code> and <code>Tests/Editor</code>.</p>
+<h4 id="editor-test-assembly-definition---testseditoromiyagamestemplateeditortestsasmdefhttpsdocsunity3dcommanualcus-asmdefhtml">Editor Test Assembly Definition - <a href="https://docs.unity3d.com/Manual/cus-asmdef.html"><code>Tests/Editor/OmiyaGames.Template.Editor.Tests.asmdef</code></a></h4>
+<p>If the entire <code>Tests/Editor</code> folder and content isn&#39;t deleted, this file <em>must</em> be renamed and edited.</p>
+<p>This is the file that will group the unit tests in the <code>Tests/Editor</code> folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package&#39;s unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  Don&#39;t forget to add <code>.Editor.Tests</code> in the file name to differentiate it from the rest of the assembly definition files.  After renaming the file, the following fields in it should be updated:</p>
+<ul>
+<li><code>name</code>: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.</li>
+<li><code>references</code>: list of C# projects the unit tests depends on.  The name of each project should be the same as the <code>name</code> field in the Assembly Definition file in said dependencies.  Don&#39;t forget to add the <code>name</code> of the <code>Runtime</code> and/or <code>Editor</code> Assembly Definition files in this list as well.</li>
+</ul>
+<p>Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window, or a typical text editor.  Note that the fields, <code>includePlatforms</code> and <code>excludePlatforms</code> should already be set properly.  Furthermore, if the Unity Inspector is used to edit this file, do <em>not</em> remove <code>UnityEngine.TestRunner</code> and <code>UnityEditor.TestRunner</code> from the <code>references</code> field.  Don&#39;t forget to check out <a href="https://docs.unity3d.com/Manual/cus-asmdef.html">Unity&#39;s documentation</a> for more information on the rest of the fields in the file!</p>
+<h4 id="editor-sample-unit-test---testseditoreditorexampletestcs">Editor Sample Unit Test - <code>Tests/Editor/EditorExampleTest.cs</code></h4>
+<p>A simple NUnit test script.  Since it&#39;s obviously just a sample file, it&#39;s recommended to delete this code.</p>
+<h4 id="runtime-test-assembly-definition---testseditoromiyagamestemplatetestsasmdefhttpsdocsunity3dcommanualcus-asmdefhtml">Runtime Test Assembly Definition - <a href="https://docs.unity3d.com/Manual/cus-asmdef.html"><code>Tests/Editor/OmiyaGames.Template.Tests.asmdef</code></a></h4>
+<p>If the entire <code>Tests/Runtime</code> folder and content isn&#39;t deleted, this file <em>must</em> be renamed and edited.</p>
+<p>This is the file that will group the unit tests in the <code>Tests/Runtime</code> folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package&#39;s unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  Don&#39;t forget to add <code>.Tests</code> in the file name to differentiate it from the rest of the assembly definition files.  After renaming the file, the following fields in it should be updated:</p>
+<ul>
+<li><code>name</code>: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.</li>
+<li><code>references</code>: list of C# projects the unit tests depends on.  The name of each project should be the same as the <code>name</code> field in the Assembly Definition file in said dependencies.  Don&#39;t forget to add the <code>name</code> of the <code>Runtime</code> Assembly Definition files in this list as well.</li>
+<li><code>includePlatforms</code>: a list of platforms this project supports.  Keep blank if all platforms should be supported.</li>
+<li><code>excludePlatforms</code>: a list of platforms this project <em>does not</em> supports.  Keep blank if all platforms should be supported.</li>
+</ul>
+<p>Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window, or a typical text editor.  If the Unity Inspector is used to edit this file, do <em>not</em> remove <code>UnityEngine.TestRunner</code> and <code>UnityEditor.TestRunner</code> from the <code>references</code> field.  Don&#39;t forget to check out <a href="https://docs.unity3d.com/Manual/cus-asmdef.html">Unity&#39;s documentation</a> for more information on the rest of the fields in the file!</p>
+<h4 id="runtime-sample-unit-test---testseditorruntimeexampletestcs">Runtime Sample Unit Test - <code>Tests/Editor/RuntimeExampleTest.cs</code></h4>
+<p>A simple NUnit test script.  Since it&#39;s obviously just a sample file, it&#39;s recommended to delete this code.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/OmiyaGames/template-unity-package/blob/master/Documentation~/manual/customizeSource.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Omiya Games
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

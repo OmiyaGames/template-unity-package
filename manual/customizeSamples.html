@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Adding Importable Assets | Template Unity Package documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Adding Importable Assets | Template Unity Package documentation ">
+    <meta name="generator" content="docfx 2.53.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="adding-importable-assets">Adding Importable Assets</h1>
+
+<p>This part of the manual pertains to the following folders and files:</p>
+<pre><code>&lt;root&gt;
+  ├── package.json
+  └── Samples~
+      └── Example1
+          └── Example.txt
+</code></pre><p>Per <a href="https://docs.unity3d.com/Manual/CustomPackages.html">Unity&#39;s documentation</a>, technically, the only required files in this section is <code>package.json</code> and at least one folder.  Furthermore, all folders do <em>not</em> have to be named the way they are, or put into hierarchy the way they are.  As Unity has not documented on their recommendation of where to place importable assets, <code>Samples~</code> will be used for this section, as the trailing <code>~</code> hides the folder from Unity Project Window&#39;s view.</p>
+<p>Note that if the project does <em>not</em> contain any importable assets, the folder <code>Samples~</code>, its subfolder, and content can be deleted safely.  Do not forget to update the <code>package.json</code> file accordingly, as detailed at the bottom of this section.</p>
+<p>This section will assume the developer <em>will</em> rename a few folders an files, and describe how to update the package to work with the new folder naming-scheme:</p>
+<h2 id="samples-folder"><code>Samples~</code> folder</h2>
+<p>This folder is intended contain assets that can be importaed from the Unity Package Manager window.  As a demonstration, the template contains one subfolder, <code>Example1</code>.  Since it and its content is obviously just a sample asset, it&#39;s recommended to delete this folder and update the Package Manifest accordingly (see the end of this section on how).</p>
+<p>If it hasn&#39;t been done so already, it&#39;s highly recommended to configure the Unity Editor to generate meta files.  For more information on Unity meta file settings, see <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/class-EditorManager.html">Unity&#39;s documentation</a> on Editor Manager.</p>
+<p><img src="https://omiyagames.github.io/template-unity-package/resources/samples.png" alt="Samples List"></p>
+<p>As seen in the screenshot above, the Unity Package Manager allows the package maintainer to list different groups of assets to import separately from one another (e.g. required assets vs. sample demonstrations).  As such, it&#39;s recommended to categorize each importable assets first.  From there, simply create a subfolder for each category, and copy or move any assets belonging in that category into the new subfolder.  Since the <code>Samples~</code> folder is hidden in the Unity Project window, this <em>must</em> be done in a file manager, e.g. Finder on Mac OSX.  Remember when copying or moving any importable assets from the Unity project to a <code>Samples~</code> subfolder, the meta file with matching file name should be copied/moved into the same subfolder as well for maximum compatibility.  Finally, do note that subfolders in <code>Samples~</code> can have more nested subfolders, if the package maintainer so desires.  When the assets get imported, the hierarcy of these subfolders will be copied over as well.</p>
+<p>Once this is all finished, the Package Manifest <strong>MUST</strong> be updated to recognize these new subfolders (see below).</p>
+<h2 id="package-manifest---packagejsonhttpsdocsunity3dcommanualupm-manifestpkghtml">Package Manifest - <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html"><code>package.json</code></a></h2>
+<p>This file is required: it should not be deleted, moved, or renamed.  That said, it <em>must</em> be edited.</p>
+<p>The Package Manifest file is a text file in JSON format storing details about the package that the Package Manager can use to display and categorize the project.  This section will only focus on one field: the <code>samples</code> field.  As of this writing, Unity does allow editing this field through its Inspector window: the file <em>must</em> be updated with a text editor.  For more information about this file, check out Unity&#39;s <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html">own documentation</a>!</p>
+<h3 id="samples"><code>samples</code></h3>
+<pre><code class="lang-json">&quot;samples&quot;: [
+  {
+    &quot;displayName&quot;: &quot;Example 1&quot;,
+    &quot;description&quot;: &quot;This sample is just an example&quot;,
+    &quot;path&quot;: &quot;Samples~/Example1&quot;
+  }
+]
+</code></pre><p>This field is optional, and if this package does not contain any importable assets, can be safely removed.  If it <em>does</em>, this field should be updated.</p>
+<p>As the name implies, <code>samples</code> is the details of each group of importable assets, split by subfolders.  By default, this template lists the <code>Samples~/Example1</code> folder it came with.  The field takes in a list of objects, each with the following fields:</p>
+<ul>
+<li><code>displayName</code>: the human-readable name listed next to the &quot;Import to Project&quot; button.</li>
+<li><code>description</code>: the description of the group of assets to import.</li>
+<li><code>path</code>: the path to the folder where this group of assets are held in.  The path is relative to the root of the package, and the folder names should be divided with a <code>/</code>, <em>regardless</em> of what operating system the package is developed in.</li>
+</ul>
+<p>If, for example, there are two sample folders, <code>Samples~/Required</code> and <code>Samples~/Examples</code>, this field could be edited as follows:</p>
+<pre><code class="lang-json">&quot;samples&quot;: [
+  {
+    &quot;displayName&quot;: &quot;Required Assets&quot;,
+    &quot;description&quot;: &quot;Assets required to make this package work&quot;,
+    &quot;path&quot;: &quot;Samples~/Required&quot;
+  },
+  {
+    &quot;displayName&quot;: &quot;Examples&quot;,
+    &quot;description&quot;: &quot;Examples assets that demonstrates how this package works.&quot;,
+    &quot;path&quot;: &quot;Samples~/Examples&quot;
+  }
+]
+</code></pre><p>As of this writing, this field is not documented in Unity&#39;s official documentation yet.  Most likely, it means this field is still in experimental phases, and may change in the future.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/OmiyaGames/template-unity-package/blob/master/Documentation~/manual/customizeSamples.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Omiya Games
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
