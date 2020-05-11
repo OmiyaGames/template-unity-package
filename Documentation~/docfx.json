@@ -46,7 +46,7 @@
         ],
         "sitemap":
         {
-            "baseUrl": "https://omiyagames.github.io/template-unity-package",
+            "baseUrl": "https://omiyagames.github.io/template-unity-package/",
             "changefreq": "weekly",
             "fileOptions": {
                 "api/*": {
