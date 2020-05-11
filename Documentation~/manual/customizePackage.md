@@ -77,7 +77,7 @@ Indicates the type of this package.  As of this writing, values Unity recognizes
 Per [Unity's documentation](https://docs.unity3d.com/Manual/CustomPackages.html), technically, the only required file in this section is `package.json`.  Nonetheless, this template follows the standard set by [Unity's documentation](https://docs.unity3d.com/Manual/cus-layout.html) to keep things consistent with other packages.  Plus, filling out the following files should help other developers better understand the purpose of the package:
 
 #### `dependencies`
-```
+```json
 "dependencies": {
   "com.unity.ext.nunit": "1.0.0"
 },
@@ -89,7 +89,7 @@ As the name implies, `dependencies` is a list of packages this project relies on
 As this field is critical for adding compiling source code to the package, more information is available at the [Adding Source Code and Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSource.html) section of this manual.
 
 #### `samples`
-```
+```json
 "samples": [
   {
     "displayName": "Example 1",

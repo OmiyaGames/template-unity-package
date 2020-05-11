@@ -35,7 +35,7 @@ This file is required: it should not be deleted, moved, or renamed.  That said, 
 The Package Manifest file is a text file in JSON format storing details about the package that the Package Manager can use to display and categorize the project.  This section will only focus on one field: the `samples` field.  As of this writing, Unity does allow editing this field through its Inspector window: the file *must* be updated with a text editor.  For more information about this file, check out Unity's [own documentation](https://docs.unity3d.com/Manual/upm-manifestPkg.html)!
 
 ### `samples`
-```
+```json
 "samples": [
   {
     "displayName": "Example 1",
@@ -53,7 +53,7 @@ As the name implies, `samples` is the details of each group of importable assets
 - `path`: the path to the folder where this group of assets are held in.  The path is relative to the root of the package, and the folder names should be divided with a `/`, *regardless* of what operating system the package is developed in.
 
 If, for example, there are two sample folders, `Samples~/Required` and `Samples~/Examples`, this field could be edited as follows:
-```
+```json
 "samples": [
   {
     "displayName": "Required Assets",
