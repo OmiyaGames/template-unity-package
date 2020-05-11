@@ -1,5 +1,9 @@
 # Change Log:
 
+## 1.3.1
+
+- Typo: Fixed the documentation build status badge in [`README.md`](https://github.com/OmiyaGames/template-unity-package/README.md).
+
 ## 1.3.0
 
 - Feature: added Github Action to auto-generate documentation in the [`Documentation~`](https://github.com/OmiyaGames/template-unity-package/Documentation~) folder using [DocFX for Unity](https://github.com/NormandErwan/DocFxForUnity) project as reference.
