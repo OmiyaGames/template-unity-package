@@ -33,7 +33,7 @@ This section covers how to update these files to generate the documentations to 
 
 ## Github Action Support
 
-Files in the `.github` folder are intended for Github-specific features, including templates for its bug-tracking system (folder `ISSUE_TEMPLATE`), list of websites to sponsor the package (file `FUNDING.yml`), and automation feature under `workflows` folder.  Obviously, if the repo is *not* hosted on Github, or the developer does not plan to take advantage of some of these features, this folder and its content may be safely deleted.
+Files in the `.github` folder are intended for Github-specific features, including automation features under `workflows` folder.  Obviously, if the repo is *not* hosted on Github, or the developer does not plan to take advantage of some of these features, this folder and its content may be safely deleted.
 
 Naturally, the Github Actions held in the `workflows` folder needs a little setup for them to work.  The following sections will cover each one, what they do, and what preparations the developer needs to make.  If similar alternatives exists for other Git repository hosts, this document will do its best to list them.
 
