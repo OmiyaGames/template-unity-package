@@ -3,6 +3,7 @@
 ## 1.3.0
 
 - Feature: added Github Action to auto-generate documentation in the [`Documentation~`](https://github.com/OmiyaGames/template-unity-package/Documentation~) folder using [DocFX for Unity](https://github.com/NormandErwan/DocFxForUnity) project as reference.
+- Feature: adding Github feature, sponsorship!  The `FUNDING.yml` file in `.github` folder adds a sponsorship button on Github with a link to [Ko-Fi](https://ko-fi.com/omiyagames).
 - Enhancement: Updated [`README.md`](https://github.com/OmiyaGames/template-unity-package/README.md) to link to the newly-generated documentation, and provide better installation instructions.
 
 ## 1.2.2
