@@ -106,7 +106,7 @@
 </ol>
 <p>This section covers how to update these files to generate the documentations to your own liking.  Note that the source for most of this information comes from the open-source <a href="https://github.com/NormandErwan/DocFxForUnity">DocFX for Unity</a> project.</p>
 <h2 id="github-action-support">Github Action Support</h2>
-<p>Files in the <code>.github</code> folder are intended for Github-specific features, including templates for its bug-tracking system (folder <code>ISSUE_TEMPLATE</code>), and automation feature under <code>workflows</code> folder.  Obviously, if the repo is <em>not</em> hosted on Github, or the developer does not plan to take advantage of some of these features, this folder and its content may be safely deleted.</p>
+<p>Files in the <code>.github</code> folder are intended for Github-specific features, including templates for its bug-tracking system (folder <code>ISSUE_TEMPLATE</code>), list of websites to sponsor the package (file <code>FUNDING.yml</code>), and automation feature under <code>workflows</code> folder.  Obviously, if the repo is <em>not</em> hosted on Github, or the developer does not plan to take advantage of some of these features, this folder and its content may be safely deleted.</p>
 <p>Naturally, the Github Actions held in the <code>workflows</code> folder needs a little setup for them to work.  The following sections will cover each one, what they do, and what preparations the developer needs to make.  If similar alternatives exists for other Git repository hosts, this document will do its best to list them.</p>
 <h3 id="githubworkflowsdocumentationyml"><code>.github/workflows/documentation.yml</code></h3>
 <p>The <code>documentation.yml</code> file automates generating documentation using DocFX.  The full documentation on what each field means is available on <a href="https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow">Github&#39;s website</a>, but this section will only cover a small part of the file.  Mainly, the <code>Build</code> line is probably where the user is most interested in:</p>
@@ -135,7 +135,7 @@
 </li>
 <li>Finally, push the repository to the master branch to deploy the automated commands!  A new breanch, <code>gh-pages</code>, and website, <code>https://&lt;username&gt;.github.io/&lt;repo-name&gt;/</code> will be created as part of this process.</li>
 </ol>
-<p>For more information, check the <a href="https://github.com/JamesIves/github-pages-deploy-action">Github Pages Deploy Action documentation</a> for more details.</p>
+<p>For more information, check the <a href="https://github.com/JamesIves/github-pages-deploy-action">Github Pages Deploy Action documentation</a>.</p>
 <h2 id="docfx-support">DocFX Support</h2>
 <p><a href="https://dotnet.github.io/docfx/">DocFX</a> allows generating documentation from Markdown files and comments in C# scripts.  This project configures DocFX to generate a website with a similar layout as Unity&#39;s own packages: a documentation split between &quot;Manual,&quot; generated from Markdown files in the <code>manual</code> folder, and &quot;Scripting API,&quot; generated from comments in C# scripts.  To customize the generated site, especially the Manual, the following files and folders should be reviewed:</p>
 <h3 id="documentationdocfxjson"><code>Documentation~/docfx.json</code></h3>
