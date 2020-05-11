@@ -58,7 +58,9 @@ The `run` string describes the Batch commands that gets run in a windows VM.  As
     docfx Documentation~/docfx.json
 ```
 
-After this line is updated to th developer's satisfaction, the repository must be configured to provide the action access to the repo itself.
+Of course, if the developer chooses to make this edit, they should also delete the `Documentation~/manual/index.md` file, and add a line in `.gitignore` to ignore this file.
+
+After this line is updated to the developer's satisfaction, the repository must be configured to provide the Github access to the repo itself.
 
 ### Creating Secret Access Key
 
