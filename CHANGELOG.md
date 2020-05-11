@@ -2,45 +2,45 @@
 
 ## 1.3.1
 
-- Typo: Fixed the documentation build status badge in [`README.md`](https://github.com/OmiyaGames/template-unity-package/README.md).
+- Typo: Fixed the documentation build status badge in [`README.md`](https://github.com/OmiyaGames/template-unity-package/blob/master/README.md).
 
 ## 1.3.0
 
-- Feature: added Github Action to auto-generate documentation in the [`Documentation~`](https://github.com/OmiyaGames/template-unity-package/Documentation~) folder using [DocFX for Unity](https://github.com/NormandErwan/DocFxForUnity) project as reference.
+- Feature: added Github Action to auto-generate documentation in the [`Documentation~`](https://github.com/OmiyaGames/template-unity-package/blob/master/Documentation~) folder using [DocFX for Unity](https://github.com/NormandErwan/DocFxForUnity) project as reference.
 - Feature: adding Github feature, sponsorship!  The `FUNDING.yml` file in `.github` folder adds a sponsorship button on Github with a link to [Ko-Fi](https://ko-fi.com/omiyagames).
-- Enhancement: Updated [`README.md`](https://github.com/OmiyaGames/template-unity-package/README.md) to link to the newly-generated documentation, and provide better installation instructions.
+- Enhancement: Updated [`README.md`](https://github.com/OmiyaGames/template-unity-package/blob/master/README.md) to link to the newly-generated documentation, and provide better installation instructions.
 
 ## 1.2.2
 
-- Enhancement: making the platform [`OmiyaGames.Template.Editor.asmdef`](https://github.com/OmiyaGames/template-unity-package/Editor/OmiyaGames.Template.Editor.asmdef) and [`OmiyaGames.Template.Editor.Tests.asmdef`](https://github.com/OmiyaGames/template-unity-package/Tests/Editor/OmiyaGames.Template.Editor.Tests.asmdef) supports to only the editor.
+- Enhancement: making the platform [`OmiyaGames.Template.Editor.asmdef`](https://github.com/OmiyaGames/template-unity-package/blob/master/Editor/OmiyaGames.Template.Editor.asmdef) and [`OmiyaGames.Template.Editor.Tests.asmdef`](https://github.com/OmiyaGames/template-unity-package/blob/master/Tests/Editor/OmiyaGames.Template.Editor.Tests.asmdef) supports to only the editor.
 
 ## 1.2.1
 
-- Rename: `EditorExampleTest.cs` to [`TestEditorExample.cs`](https://github.com/OmiyaGames/template-unity-package/Tests/Editor/TestEditorExample.cs). Updated class name along with it.
-- Rename: `RuntimeExampleTest.cs` to [`TestRuntimeExample.cs`](https://github.com/OmiyaGames/template-unity-package/Tests/Editor/TestRuntimeExample.cs). Updated class name along with it.
-- Typo: Removed `[CustomEditor(typeof(RuntimeExample))]` attribute from [`EditorExampleTest.cs`](https://github.com/OmiyaGames/template-unity-package/Tests/Editor/TestEditorExample.cs). It serves no purpose.
-- Typo: Removed `[CustomEditor(typeof(RuntimeExample))]` attribute from [`EditorExampleTest.cs`](https://github.com/OmiyaGames/template-unity-package/Tests/Editor/TestEditorExample.cs). It serves no purpose.
+- Rename: `EditorExampleTest.cs` to [`TestEditorExample.cs`](https://github.com/OmiyaGames/template-unity-package/blob/master/Tests/Editor/TestEditorExample.cs). Updated class name along with it.
+- Rename: `RuntimeExampleTest.cs` to [`TestRuntimeExample.cs`](https://github.com/OmiyaGames/template-unity-package/blob/master/Tests/Editor/TestRuntimeExample.cs). Updated class name along with it.
+- Typo: Removed `[CustomEditor(typeof(RuntimeExample))]` attribute from [`EditorExampleTest.cs`](https://github.com/OmiyaGames/template-unity-package/blob/master/Tests/Editor/TestEditorExample.cs). It serves no purpose.
+- Typo: Removed `[CustomEditor(typeof(RuntimeExample))]` attribute from [`EditorExampleTest.cs`](https://github.com/OmiyaGames/template-unity-package/blob/master/Tests/Editor/TestEditorExample.cs). It serves no purpose.
 
 ## 1.2.0
 
-- Feature: Updated the [`Tests`](https://github.com/OmiyaGames/template-unity-package/Tests) assembly definition files and example scripts with proper configuration for editing/creating new unit test scripts. Also updated [`package.json`](https://github.com/OmiyaGames/template-unity-package/package.json) with NUnit as a required dependency.
-- Enhancement: Added significantly more information in [`README.md`](https://github.com/OmiyaGames/template-unity-package/README.md) so other people can use a more fleshed-out markdown format to start their documentation.
-- Enhancement: Changing [`package.json`](https://github.com/OmiyaGames/template-unity-package/package.json) into a type -> Tool, and added one more keyword.
-- Enhancement: Noting [`THIRD PARTY NOTICES.md`](https://github.com/OmiyaGames/template-unity-package/THIRD%20PARTY%20NOTICES.md) is just an example, and this project doesn't actually use any 3rd party tools yet (besides unit testing, but I think that's already implied).
+- Feature: Updated the [`Tests`](https://github.com/OmiyaGames/template-unity-package/blob/master/Tests) assembly definition files and example scripts with proper configuration for editing/creating new unit test scripts. Also updated [`package.json`](https://github.com/OmiyaGames/template-unity-package/blob/master/package.json) with NUnit as a required dependency.
+- Enhancement: Added significantly more information in [`README.md`](https://github.com/OmiyaGames/template-unity-package/blob/master/README.md) so other people can use a more fleshed-out markdown format to start their documentation.
+- Enhancement: Changing [`package.json`](https://github.com/OmiyaGames/template-unity-package/blob/master/package.json) into a type -> Tool, and added one more keyword.
+- Enhancement: Noting [`THIRD PARTY NOTICES.md`](https://github.com/OmiyaGames/template-unity-package/blob/master/THIRD%20PARTY%20NOTICES.md) is just an example, and this project doesn't actually use any 3rd party tools yet (besides unit testing, but I think that's already implied).
 
 ## 1.1.0
 
-- Feature: adding a [`Documentation~/Doxyfile`](https://github.com/OmiyaGames/template-unity-package/Documentation~/Doxyfile) to make generating [Doxygen](http://doxygen.nl/) files a little easier.
+- Feature: adding a [`Documentation~/Doxyfile`](https://github.com/OmiyaGames/template-unity-package/blob/master/Documentation~/Doxyfile) to make generating [Doxygen](http://doxygen.nl/) files a little easier.
 
 ## 1.0.2
 
-- Typo: renaming `Documentation~/index.md` to [`Documentation~/Template.md`](https://github.com/OmiyaGames/template-unity-package/Documentation~/Template.md) to match Unity recommendation.
+- Typo: renaming `Documentation~/index.md` to [`Documentation~/Template.md`](https://github.com/OmiyaGames/template-unity-package/blob/master/Documentation~/Template.md) to match Unity recommendation.
 
 ## 1.0.1
 
-- Bug fix: [`Editor/EditorExample.cs`](https://github.com/OmiyaGames/template-unity-package/Editor/EditorExample.cs) now compiles properly.
-- Typo: updated namespace in [`Tests/Editor/EditorExampleTest.cs`](https://github.com/OmiyaGames/template-unity-package/Tests/Editor/EditorExampleTest.cs) to inlucde `Test`.
-- Typo: changing the [`THIRD PARTY NOTICES.md`](https://github.com/OmiyaGames/template-unity-package/THIRD%20PARTY%20NOTICES.md) Credits section to use a list, so each field is in its own line.
+- Bug fix: [`Editor/EditorExample.cs`](https://github.com/OmiyaGames/template-unity-package/blob/master/Editor/EditorExample.cs) now compiles properly.
+- Typo: updated namespace in [`Tests/Editor/EditorExampleTest.cs`](https://github.com/OmiyaGames/template-unity-package/blob/master/Tests/Editor/EditorExampleTest.cs) to inlucde `Test`.
+- Typo: changing the [`THIRD PARTY NOTICES.md`](https://github.com/OmiyaGames/template-unity-package/blob/master/THIRD%20PARTY%20NOTICES.md) Credits section to use a list, so each field is in its own line.
 
 ## 1.0.0
 
