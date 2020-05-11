@@ -1,13 +1,14 @@
-* Note: below is just an example of how one might denote what third-party tools are being utilized.*
-
 This package borrows code from various different sources, including:
 
-# Component: A Third-Party Component
+# [DocFX for Unity](https://github.com/NormandErwan/DocFxForUnity)
 
-## Relevant Files
-- [RuntimeExample.cs](/Runtime/RuntimeExample.cs)
+### Relevant Files
+- [Documentation~/docfx.json](https://github.com/OmiyaGames/template-unity-project/Documentation~/docfx.json)
+- [Documentation~/filterConfig.yml](https://github.com/OmiyaGames/template-unity-project/Documentation~/filterConfig.yml)
+- [Documentation~/toc.yml](https://github.com/OmiyaGames/template-unity-project/Documentation~/toc.yml)
+- [.github/workflows/documentation.yml](https://github.com/OmiyaGames/template-unity-project/.github/workflows/documentation.yml)
 
-## Credits
-- Author: Taro Omiya
-- Source: [/Runtime/RuntimeExample.cs](/Runtime/RuntimeExample.cs)
-- License: [MIT](/LICENSE.md)
+### Credits
+- Author: [Erwan Normand](https://github.com/NormandErwan)
+- Source: [DocFX for Unity](https://github.com/NormandErwan/DocFxForUnity)
+- License: [MIT](https://github.com/NormandErwan/DocFxForUnity/blob/master/LICENSE)
