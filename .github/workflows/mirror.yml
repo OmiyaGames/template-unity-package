@@ -13,3 +13,5 @@ jobs:
           git@bitbucket.org:OmiyaGames/template-unity-package.git
         ssh_private_key:                                # <-- use 'secrets' to pass credential information.
           ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh_username:                                   # <-- you need to specify ssh-key-id as ssh username.
+          ${{ secrets.SSH_PRIVATE_KEY_ID }}
