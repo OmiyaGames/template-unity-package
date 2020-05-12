@@ -53,8 +53,15 @@ The project follows [Unity's recommend file and folder format](https://docs.unit
   |       ├── preview.png
   |       └── README.md
   └── .github
+      ├── FUNDING.yml
+      ├── ISSUE_TEMPLATE
+      |   ├── bug_report.md
+      |   ├── feature_request.md
+      |   ├── documentation-template.md
+      |   └── research_template.md
       └── workflows
-          └── documentation.yml
+          ├── documentation.yml
+          └── mirror.yml
 ```
 
 ## Common Text Formats
