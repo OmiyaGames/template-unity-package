@@ -4,7 +4,7 @@ on: [push, delete]
 
 jobs:
   to_bitbucket:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:                                              # <-- must use actions/checkout@v1 before mirroring!
     - uses: actions/checkout@v1
     - uses: pixta-dev/repository-mirroring-action@v1
@@ -13,5 +13,5 @@ jobs:
           git@bitbucket.org:OmiyaGames/template-unity-package.git
         ssh_private_key:                                # <-- use 'secrets' to pass credential information.
           ${{ secrets.SSH_PRIVATE_KEY }}
-        ssh_username:                                   # <-- you need to specify ssh-key-id as ssh username.
-          ${{ secrets.SSH_PRIVATE_KEY_ID }}
+        #ssh_username:                                   # <-- you need to specify ssh-key-id as ssh username.
+        #  ${{ secrets.SSH_PRIVATE_KEY_ID }}
