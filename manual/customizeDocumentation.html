@@ -109,7 +109,15 @@
 <p>Files in the <code>.github</code> folder are intended for Github-specific features, including automation features under <code>workflows</code> folder.  Obviously, if the repo is <em>not</em> hosted on Github, or the developer does not plan to take advantage of some of these features, this folder and its content may be safely deleted.</p>
 <p>Naturally, the Github Actions held in the <code>workflows</code> folder needs a little setup for them to work.  The following sections will cover each one, what they do, and what preparations the developer needs to make.  If similar alternatives exists for other Git repository hosts, this document will do its best to list them.</p>
 <h3 id="githubworkflowsdocumentationyml"><code>.github/workflows/documentation.yml</code></h3>
-<p>The <code>documentation.yml</code> file automates generating documentation using DocFX.  The full documentation on what each field means is available on <a href="https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow">Github&#39;s website</a>, but this section will only cover a small part of the file.  Mainly, the <code>Build</code> line is probably where the user is most interested in:</p>
+<p>The <code>documentation.yml</code> file automates generating documentation using DocFX.  The full documentation on what each field means is available on <a href="https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow">Github&#39;s website</a>, but this section will only cover a small part of the file.</p>
+<h4 id="if-lines"><code>if:</code> lines</h4>
+<p>To prevent this action from running on every repository that copies or forks this template, an <code>if</code> line and conditional is added at two jobs in <code>documentation.yml</code>, and look like this:</p>
+<pre><code class="lang-yaml">if:    # Adding if-statement to prevent this job from running on packages using this template.
+       # If you want to run this documentation job, just take out the if-field and value below.
+  github.repository == &#39;OmiyaGames/template-unity-package&#39;
+</code></pre><p>As the comments imply, if the developer wants Github to automatically generate their documentation, they should remove these lines.</p>
+<h4 id="name-build-line"><code>name: Build</code> line</h4>
+<p>The <code>Build</code> line is probably where most developers would be most interested in:</p>
 <pre><code class="lang-yaml">- name: Build
   run: |
     cp CHANGELOG.md Documentation~/manual/changelog.md

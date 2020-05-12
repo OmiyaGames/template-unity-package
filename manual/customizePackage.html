@@ -156,7 +156,13 @@
 <h2 id="github-specific-features---github-folder">Github-Specific Features - <code>.github</code> Folder</h2>
 <p>Files in the <code>.github</code> folder are intended for Github-specific features, including templates for its bug-tracking system (folder <code>ISSUE_TEMPLATE</code>), list of websites to sponsor the package (file <code>FUNDING.yml</code>), and automation feature under <code>workflows</code> folder.  Obviously, if the repo is <em>not</em> hosted on Github, this folder and its content can be safely deleted.  If the developer <em>does</em> want to utilize some of the features this template comes with, the purpose of each file or folder will be listed below:</p>
 <h3 id="githubworkflowsmirroryml"><code>.github/workflows/mirror.yml</code></h3>
-<p>This YAML file instructs Github to automatically push any changes made to this online repository to other mirrors.  Omiya Games originally had their projects hosted in Bitbucket before moving them to Github, so mirroring back to that site made sense to them.  For those who would like to take advantage of this feature should review the instructions available under this <a href="https://github.com/marketplace/actions/mirroring-repository">Github Action page</a>; it is a bit out of scope for this manual.  Obviously, if the developer has no plans to mirror this repository elsewhere, this file can be safely deleted.</p>
+<p>This YAML file instructs Github to automatically push any changes made to this online repository to other mirrors.  It&#39;s frankly recommended to delete this file, as most developers won&#39;t need it.  If the developer is interested in mirroring, the subject is fairly large and out-of-scope for this manual, but the following resources should help give direction:</p>
+<ul>
+<li><a href="https://github.com/marketplace/actions/mirroring-repository">Github Action page</a></li>
+<li><a href="https://developer.github.com/v3/guides/managing-deploy-keys/">Managing deploy keys</a></li>
+<li><a href="https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets">Adding secrets</a></li>
+</ul>
+<p>Also, don&#39;t forget to review the content of the file itself, as it does provide some comments to help give directions.</p>
 <h3 id="githubworkflowsdocumentationyml"><code>.github/workflows/documentation.yml</code></h3>
 <p>This YAML file instructs Github to automatically generate a documentation website.  For those who would like to take advantange of this feature, the <a href="https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html">Customizing Documentation</a> section of this manual covers this file extensively.  Obviously, if the developer has no plans on generating documentation for their package, this file can be safely deleted.</p>
 <h3 id="githubfundingyml"><code>.github/FUNDING.yml</code></h3>

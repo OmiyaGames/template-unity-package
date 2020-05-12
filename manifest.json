@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/changelog.html",
-          "hash": "0SPu+tWFR3gQfBAxeZW6Sw=="
+          "hash": "YLptjPbA7NH3cNZfO43fqg=="
         }
       },
       "is_incremental": false,
@@ -124,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizeDocumentation.html",
-          "hash": "fzuuHh0c4eacp0mOT1oHeg=="
+          "hash": "6wt+xwWLjDpJQJvKyxaPYw=="
         }
       },
       "is_incremental": false,
@@ -139,7 +139,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizePackage.html",
-          "hash": "Uk4DskW7x/E+FT+m4DCZGQ=="
+          "hash": "6TsPb+8E4WGftOnVHeognQ=="
         }
       },
       "is_incremental": false,
