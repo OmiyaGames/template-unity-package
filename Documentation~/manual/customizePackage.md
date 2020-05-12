@@ -122,7 +122,7 @@ Files in the `.github` folder are intended for Github-specific features, includi
 
 ### `.github/workflows/mirror.yml`
 
-This YAML file instructs Github to automatically push any changes made to this online repository to other mirrors.  Omiya Games originally had their projects hosted in Bitbucket before moving them to Github, so mirroring back to that site made sense to them.  For those who would like to take advantage of this feature should review the instructions available under this [Github Action page](https://github.com/marketplace/actions/mirror-a-repository-using-ssh); it is a bit out of scope for this manual.  Obviously, if the developer has no plans to mirror this repository elsewhere, this file can be safely deleted.
+This YAML file instructs Github to automatically push any changes made to this online repository to other mirrors.  Omiya Games originally had their projects hosted in Bitbucket before moving them to Github, so mirroring back to that site made sense to them.  For those who would like to take advantage of this feature should review the instructions available under this [Github Action page](https://github.com/marketplace/actions/mirroring-repository); it is a bit out of scope for this manual.  Obviously, if the developer has no plans to mirror this repository elsewhere, this file can be safely deleted.
 
 ### `.github/workflows/documentation.yml`
 
