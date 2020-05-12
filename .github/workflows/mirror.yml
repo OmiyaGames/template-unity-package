@@ -4,14 +4,12 @@ on: [push, delete]
 
 jobs:
   to_bitbucket:
-    runs-on: ubuntu-18.04
-    steps:                                              # <-- must use actions/checkout@v1 before mirroring!
+    runs-on: ubuntu-latest
+    steps:
     - uses: actions/checkout@v1
     - uses: pixta-dev/repository-mirroring-action@v1
       with:
-        target_repo_url:
+        target_repo_url:          # <-- Enter the SSH URL to mirror the Github repo to.
           git@bitbucket.org:OmiyaGames/template-unity-package.git
-        ssh_private_key:                                # <-- use 'secrets' to pass credential information.
+        ssh_private_key:          # <-- Add a secret in Github with the name, SSH_PRIVATE_KEY.
           ${{ secrets.SSH_PRIVATE_KEY }}
-        #ssh_username:                                   # <-- you need to specify ssh-key-id as ssh username.
-        #  ${{ secrets.SSH_PRIVATE_KEY_ID }}
