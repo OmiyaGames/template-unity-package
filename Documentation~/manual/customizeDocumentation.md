@@ -39,7 +39,23 @@ Naturally, the Github Actions held in the `workflows` folder needs a little setu
 
 ### `.github/workflows/documentation.yml`
 
-The `documentation.yml` file automates generating documentation using DocFX.  The full documentation on what each field means is available on [Github's website](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow), but this section will only cover a small part of the file.  Mainly, the `Build` line is probably where the user is most interested in:
+The `documentation.yml` file automates generating documentation using DocFX.  The full documentation on what each field means is available on [Github's website](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow), but this section will only cover a small part of the file.
+
+#### `if:` lines
+
+To prevent this action from running on every repository that copies or forks this template, an `if` line and conditional is added at two jobs in `documentation.yml`, and look like this:
+
+```yaml
+if:    # Adding if-statement to prevent this job from running on packages using this template.
+       # If you want to run this documentation job, just take out the if-field and value below.
+  github.repository == 'OmiyaGames/template-unity-package'
+```
+
+As the comments imply, if the developer wants Github to automatically generate their documentation, they should remove these lines.
+
+#### `name: Build` line
+
+The `Build` line is probably where most developers would be most interested in:
 
 ```yaml
 - name: Build
