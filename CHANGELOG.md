@@ -1,9 +1,13 @@
 # Change Log:
 
+## 1.4.1
+
+- Enhancement: changing the mirror action to [this one](https://github.com/marketplace/actions/mirroring-repository).
+
 ## 1.4.0
 
 - Feature: added Github Action to mirror the repository to [`Bitbucket`](https://bitbucket.org/OmiyaGames/template-unity-package) automatically.  This new file is available here: [`.github/workflows/mirror.yml`](https://github.com/OmiyaGames/template-unity-package/blob/master/.github/workflows/mirror.yml).
-- Enhancement: Updated [Customize Package manual](https://omiyagames.github.io/template-unity-package/manual/customizePackage.html) talking about what files from `.github` can be deleted or edited.
+- Enhancement: updated [Customize Package manual](https://omiyagames.github.io/template-unity-package/manual/customizePackage.html) talking about what files from `.github` can be deleted or edited.
 
 ## 1.3.1
 
