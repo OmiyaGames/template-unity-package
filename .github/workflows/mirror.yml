@@ -1,14 +1,15 @@
-name: Mirror to Bitbucket Repo
+name: Mirroring
 
-on: [ push, delete, create ]
+on: [push, delete]
 
 jobs:
-  git-mirror:
+  to_bitbucket:
     runs-on: ubuntu-latest
     steps:
-      - uses: wearerequired/git-mirror-action@v1
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        with:
-          source-repo: 'git@github.com:OmiyaGames/template-unity-package.git'
-          destination-repo: 'git@bitbucket.org:OmiyaGames/template-unity-package.git'
+    - uses: actions/checkout@v1
+    - uses: pixta-dev/repository-mirroring-action@v1
+      with:
+        target_repo_url:          # <-- Enter the SSH URL to mirror the Github repo to.
+          git@bitbucket.org:OmiyaGames/template-unity-package.git
+        ssh_private_key:          # <-- Add a secret in Github with the name, SSH_PRIVATE_KEY.
+          ${{ secrets.SSH_PRIVATE_KEY }}
