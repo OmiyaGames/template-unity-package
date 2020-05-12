@@ -1,5 +1,9 @@
 # Change Log:
 
+## 1.4.2
+
+- Enhancement: adding conditionals to [`.github/workflows/documentation.yml`](https://github.com/OmiyaGames/template-unity-package/blob/master/.github/workflows/documentation.yml) and [`.github/workflows/mirror.yml`](https://github.com/OmiyaGames/template-unity-package/blob/master/.github/workflows/mirror.yml) to prevent the jobs from running on other repos copying this template automatically.  Added comments, and updated documentation indicating these conditional's purpose, and how to remove them.
+
 ## 1.4.1
 
 - Enhancement: changing the mirror action to [this one](https://github.com/marketplace/actions/mirroring-repository).
