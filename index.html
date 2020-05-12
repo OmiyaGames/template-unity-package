@@ -8,7 +8,7 @@
     <title>Omiya Games - Template Unity Package | Template Unity Package documentation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Omiya Games - Template Unity Package | Template Unity Package documentation ">
-    <meta name="generator" content="docfx 2.53.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -79,6 +79,7 @@
 <li>If they plan on creating a new online repository on Github directly, click on the green &quot;Use this template&quot; button to get started, or</li>
 <li>Click the &quot;Releases&quot; link, and download the latest archive as zip or gzip file.</li>
 </ul>
+<h2 id="structure">Structure</h2>
 <p>The project follows <a href="https://docs.unity3d.com/Manual/cus-layout.html">Unity&#39;s recommend file and folder format</a>, albeit with a few changes:</p>
 <pre><code>&lt;root&gt;
   ├── package.json
@@ -104,24 +105,32 @@
   │   └── Example1
   │       └── Example.txt
   ├── Documentation~
-  |    ├── index.md
-  |    ├── Doxyfile
-  |    ├── docfx.json
-  |    ├── toc.yml
-  |    ├── filterConfig.yml
-  |    ├── manual
-  |    |   ├── toc.yml
-  |    |   ├── customizeDocumentation.md
-  |    |   ├── customizePackage.md
-  |    |   ├── customizeSamples.md
-  |    |   └── README.md
-  |    └── resources
-  |        ├── preview.png
-  |        └── README.md
+  |   ├── index.md
+  |   ├── Doxyfile
+  |   ├── docfx.json
+  |   ├── toc.yml
+  |   ├── filterConfig.yml
+  |   ├── manual
+  |   |   ├── toc.yml
+  |   |   ├── customizeDocumentation.md
+  |   |   ├── customizePackage.md
+  |   |   ├── customizeSamples.md
+  |   |   └── README.md
+  |   └── resources
+  |       ├── preview.png
+  |       └── README.md
   └── .github
+      ├── FUNDING.yml
+      ├── ISSUE_TEMPLATE
+      |   ├── bug_report.md
+      |   ├── feature_request.md
+      |   ├── documentation-template.md
+      |   └── research_template.md
       └── workflows
-          └── documentation.yml
-</code></pre><p>Note that this sprawling list of files contains a large number of common, human-readable (i.e. non-code, data-storing) text formats.  If some of these file extensions are unfamiliar, the following resources describes how to edit and format the most common text files used in this project:</p>
+          ├── documentation.yml
+          └── mirror.yml
+</code></pre><h2 id="common-text-formats">Common Text Formats</h2>
+<p>Note that this sprawling list of files contains a large number of common, human-readable (i.e. non-code, data-storing) text formats.  If some of these file extensions are unfamiliar, the following resources describes how to edit and format the most common text files used in this project:</p>
 <ul>
 <li><a href="https://www.json.org/json-en.html">JSON (<code>*.json, *.asmdef</code>)</a><ul>
 <li>Although the <a href="https://en.wikipedia.org/wiki/JSON#Data_types_and_syntax">Wikipedia page</a> might be easier understand.</li>
@@ -137,6 +146,7 @@
 </li>
 <li><a href="https://git-scm.com/docs/gitignore#_pattern_format">Bonus: <code>.gitignore</code></a></li>
 </ul>
+<h2 id="about-the-manual">About the Manual</h2>
 <p>As many of these files are intended to be edited and/or renamed, this manual has been split up into three parts.  The links below briefly covers how to update this package&#39;s files for your own package development.</p>
 <ul>
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizePackage.html">Customizing Package Files</a></li>
@@ -144,12 +154,7 @@
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html">Adding Importable Assets</a></li>
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html">Customizing Documentation</a></li>
 </ul>
-<h2 id="other-resources">Other Resources</h2>
-<ul>
-<li><a href="https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/"><em>How to Split Up an Existing Unity Git Project into Smaller Unity Packages</em></a>: A more fleshed-out tutorial with graphics, by <a href="https://github.com/japtar10101">Taro Omiya&#39;s</a></li>
-<li>This project&#39;s <a href="https://github.com/OmiyaGames/template-unity-package">Github Repository</a></li>
-<li>This project&#39;s <a href="https://github.com/OmiyaGames/template-unity-package/blob/master/CHANGELOG.md">Change Log</a></li>
-</ul>
+<p>As an aside, <a href="https://github.com/japtar10101">the author</a> of this manual provided a more thorough guide with graphics on their own blog: <a href="https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/"><em>How to Split Up an Existing Unity Git Project into Smaller Unity Packages</em></a>.  It&#39;s worth reviewing if the manual seems a little sparse.  Finally, changes in the project is documented under the <a href="https://omiyagames.github.io/template-unity-package/manual/changelog.html">change log page</a>.</p>
 <h2 id="license">LICENSE</h2>
 <p>Overall package is licensed under <a href="https://github.com/OmiyaGames/template-unity-package/blob/master/LICENSE.md">MIT</a>, unless otherwise noted in the <a href="https://github.com/OmiyaGames/template-unity-package/blob/master/THIRD%20PARTY%20NOTICES.md">3rd party licenses</a> file and/or source code.</p>
 </article>
