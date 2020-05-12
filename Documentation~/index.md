@@ -9,6 +9,8 @@
 - If they plan on creating a new online repository on Github directly, click on the green "Use this template" button to get started, or
 - Click the "Releases" link, and download the latest archive as zip or gzip file.
 
+## Structure
+
 The project follows [Unity's recommend file and folder format](https://docs.unity3d.com/Manual/cus-layout.html), albeit with a few changes:
 
 ```
@@ -36,24 +38,33 @@ The project follows [Unity's recommend file and folder format](https://docs.unit
   │   └── Example1
   │       └── Example.txt
   ├── Documentation~
-  |    ├── index.md
-  |    ├── Doxyfile
-  |    ├── docfx.json
-  |    ├── toc.yml
-  |    ├── filterConfig.yml
-  |    ├── manual
-  |    |   ├── toc.yml
-  |    |   ├── customizeDocumentation.md
-  |    |   ├── customizePackage.md
-  |    |   ├── customizeSamples.md
-  |    |   └── README.md
-  |    └── resources
-  |        ├── preview.png
-  |        └── README.md
+  |   ├── index.md
+  |   ├── Doxyfile
+  |   ├── docfx.json
+  |   ├── toc.yml
+  |   ├── filterConfig.yml
+  |   ├── manual
+  |   |   ├── toc.yml
+  |   |   ├── customizeDocumentation.md
+  |   |   ├── customizePackage.md
+  |   |   ├── customizeSamples.md
+  |   |   └── README.md
+  |   └── resources
+  |       ├── preview.png
+  |       └── README.md
   └── .github
+      ├── FUNDING.yml
+      ├── ISSUE_TEMPLATE
+      |   ├── bug_report.md
+      |   ├── feature_request.md
+      |   ├── documentation-template.md
+      |   └── research_template.md
       └── workflows
-          └── documentation.yml
+          ├── documentation.yml
+          └── mirror.yml
 ```
+
+## Common Text Formats
 
 Note that this sprawling list of files contains a large number of common, human-readable (i.e. non-code, data-storing) text formats.  If some of these file extensions are unfamiliar, the following resources describes how to edit and format the most common text files used in this project:
 
@@ -65,6 +76,8 @@ Note that this sprawling list of files contains a large number of common, human-
     - They also provide [a cheatsheet](https://www.markdownguide.org/cheat-sheet)!
 - [Bonus: `.gitignore`](https://git-scm.com/docs/gitignore#_pattern_format)
 
+## About the Manual
+
 As many of these files are intended to be edited and/or renamed, this manual has been split up into three parts.  The links below briefly covers how to update this package's files for your own package development.
 
 - [Customizing Package Files](https://omiyagames.github.io/template-unity-package/manual/customizePackage.html)
@@ -72,11 +85,7 @@ As many of these files are intended to be edited and/or renamed, this manual has
 - [Adding Importable Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html)
 - [Customizing Documentation](https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html)
 
-## Other Resources
-
-- [*How to Split Up an Existing Unity Git Project into Smaller Unity Packages*](https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/): A more fleshed-out tutorial with graphics, by [Taro Omiya's](https://github.com/japtar10101)
-- This project's [Github Repository](https://github.com/OmiyaGames/template-unity-package)
-- This project's [Change Log](https://github.com/OmiyaGames/template-unity-package/blob/master/CHANGELOG.md)
+As an aside, [the author](https://github.com/japtar10101) of this manual provided a more thorough guide with graphics on their own blog: [*How to Split Up an Existing Unity Git Project into Smaller Unity Packages*](https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/).  It's worth reviewing if the manual seems a little sparse.  Finally, changes in the project is documented under the [change log page](https://omiyagames.github.io/template-unity-package/manual/changelog.html).
 
 ## LICENSE
 

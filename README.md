@@ -1,6 +1,6 @@
 # [Omiya Games](https://www.omiyagames.com/) - Template Unity Package
 
-![Template Unity Package documentation](https://github.com/OmiyaGames/template-unity-package/workflows/Host%20DocFX%20Documentation/badge.svg) [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I51KS8F)
+[![Template Unity Package documentation](https://github.com/OmiyaGames/template-unity-package/workflows/Host%20DocFX%20Documentation/badge.svg)](https://omiyagames.github.io/template-unity-package/) [![Mirror to Bitbucket Repo](https://github.com/OmiyaGames/template-unity-package/workflows/Mirror%20to%20Bitbucket%20Repo/badge.svg)](https://bitbucket.org/OmiyaGames/template-unity-package) [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I51KS8F)
 
 ![Unity Package Manager](https://omiyagames.github.io/template-unity-package/resources/preview.png)
 
