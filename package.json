@@ -1,32 +1,20 @@
 {
-  "name": "com.omiyagames.template",
-  "displayName": "Omiya Games - Template Unity Package",
-  "version": "0.1.0-preview.1",
-  "unity": "2019.3",
-  "unityRelease": "7f1",
-  "description": "This is a template package, used as a basis to build a bigger one.",
-  "category": "Tool",
-  "type": "tool",
-  "license": "MIT",
+  "name": "fr.foxar.TEMPLATE",
+  "displayName": "Foxar TEMPLATE",
+  "version": "1.0.0",
+  "unity": "2021.1",
+  "unityRelease": "22f1",
+  "description": "Foxar TEMPLATE",
+  "license": "proprietary",
   "author": {
-    "name": "Taro Omiya",
-    "email": "support@omiyagames.com",
-    "url": "https://www.omiyagames.com"
+    "name": "Foxar",
+    "email": "contact@foxar.fr",
+    "url": "https://foxar.fr"
   },
   "dependencies": {
+    "fr.foxar.foxarcore": "1.0.0",
     "com.unity.ext.nunit": "1.0.0"
   },
-  "keywords": [
-    "Omiya Games",
-    "Scripts",
-    "Template",
-    "Tool"
-  ],
-  "samples": [
-    {
-      "displayName": "Example 1",
-      "description": "This sample is just an example",
-      "path": "Samples~/Example1"
-    }
-  ]
+  "hideInEditor": false,
+  "type": "library"
 }
