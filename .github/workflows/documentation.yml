@@ -3,7 +3,7 @@ name: Host DocFX Documentation
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   # Build the documentation
