@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OmiyaGames.Template.Editor.EditorExample.html",
-          "hash": "XDkNa5PXwhNscmJRMaReWg=="
+          "hash": "aBYeXrRGBYfrTTvOTZg4wHuRMAZsoVJna7fuqLPqFxE="
         }
       },
       "is_incremental": false,
@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OmiyaGames.Template.Editor.html",
-          "hash": "FdGf5SdNi3H6JXRAyxGvTA=="
+          "hash": "YRX6sIgFIjSRxgQPYUQF9MGhxLoBs371d1l0Kb90e7k="
         }
       },
       "is_incremental": false,
@@ -52,7 +52,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OmiyaGames.Template.RuntimeExample.html",
-          "hash": "Xr1LqeRvciMf5DwKW+9Ntw=="
+          "hash": "wkJvybEHAyYOVJE8P0EPg0wqMHzVlIa0AErAtxz0aZo="
         }
       },
       "is_incremental": false,
@@ -64,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OmiyaGames.Template.html",
-          "hash": "rUgmfvjTVmzGED7WxD9wVg=="
+          "hash": "CH468o/1A/vFxoDTDTyvAdBCVqg9Ipr+mab3L6dn9bk="
         }
       },
       "is_incremental": false,
@@ -76,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lKb4la6HzTfGBNJe1oJk/w=="
+          "hash": "px+uWG/YTpTXGvASpvO0yJMngZgKfxE8jYXbnMP3+o8="
         }
       },
       "is_incremental": false,
@@ -88,7 +88,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "cRTQtrwfaUF92o4lhV1qJw=="
+          "hash": "UZ+qGeMWX3YKoaze3lZC4oTVGrxi+PPH6YYqGVk1ZdY="
         }
       },
       "is_incremental": false,
@@ -100,7 +100,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/README.html",
-          "hash": "LJncekULZYQ09XNlO5M0Dw=="
+          "hash": "796M5RAfwE/7/dQNkD3AmFNMHJDliPvSChXFp4Pb1D4="
         }
       },
       "is_incremental": false,
@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/changelog.html",
-          "hash": "YLptjPbA7NH3cNZfO43fqg=="
+          "hash": "MJoYOnNfyKz5feWTeevJqINLQnauDeUmpc/f4MKejNk="
         }
       },
       "is_incremental": false,
@@ -124,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizeDocumentation.html",
-          "hash": "6wt+xwWLjDpJQJvKyxaPYw=="
+          "hash": "rJqiEbT+hnlzVh1ToXkaPY60eeLOych+5XQjU9O2ZfQ="
         }
       },
       "is_incremental": false,
@@ -139,7 +139,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizePackage.html",
-          "hash": "6TsPb+8E4WGftOnVHeognQ=="
+          "hash": "2skDl89vj+cAY51P1yBfe+3Br0hVftpXGX55hP0rsbM="
         }
       },
       "is_incremental": false,
@@ -151,7 +151,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizeSamples.html",
-          "hash": "ZQ0xcOdgCX1hy8RlR++cXQ=="
+          "hash": "kCSv9mAQRw2+xAzzHY1bhsFynLiwY0L7jGMuAsl79S0="
         }
       },
       "is_incremental": false,
@@ -163,7 +163,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizeSource.html",
-          "hash": "3vBchvm0re7t07uZUUmiUA=="
+          "hash": "U0eKoRo04/orBrqE9HLTQRDqoZfFa1Mr/pZ8Dalz8LY="
         }
       },
       "is_incremental": false,
@@ -175,7 +175,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "Sp9dtUt2o6Dyzo8VzsAfpw=="
+          "hash": "BfKfIlQqat9wp9c3qn1lewr/21v9MNfx8ZrV55w24n4="
         }
       },
       "is_incremental": false,
@@ -242,7 +242,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "/Rk9CPSAIPHG5ob2/sm/FA=="
+          "hash": "ytfYqQUDy56mz1dkbbi/NRni7LPPjVlfv7qa30E00Fg="
         }
       },
       "is_incremental": false,
