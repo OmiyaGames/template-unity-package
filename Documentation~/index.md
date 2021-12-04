@@ -1,6 +1,6 @@
 # [Omiya Games](https://www.omiyagames.com/) - Template Unity Package
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I51KS8F)
+[![Ko-fi Badge](https://img.shields.io/badge/donate-ko--fi-29abe0.svg?logo=ko-fi)](https://ko-fi.com/I3I51KS8F) [![License Badge](https://img.shields.io/github/license/OmiyaGames/template-unity-package)](/LICENSE.md)
 
 ![Unity Package Manager](https://omiyagames.github.io/template-unity-package/resources/preview.png)
 
