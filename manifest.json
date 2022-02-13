@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OmiyaGames.Template.Editor.EditorExample.html",
-          "hash": "G1v1ebn+yUSPqShqTUwcQgMAHZgUvl/KJ8GHGBiTfak="
+          "hash": "3grUiIWcpoyeiMZIDO7hzPZG4pLtdwVBAvLEtLVMCG4="
         }
       },
       "is_incremental": false,
@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OmiyaGames.Template.Editor.html",
-          "hash": "oeTDs0jzF/yX19RRd1/ZGo522jNoBL+JvZPPxk6y6tY="
+          "hash": "Mlj8Saei1fvm9fxjM0Fed38iseuUQtahZhJPkT4wWt4="
         }
       },
       "is_incremental": false,
@@ -52,7 +52,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OmiyaGames.Template.RuntimeExample.html",
-          "hash": "guEQhCANvYcJYvnibYA98gkfPjbWY+BSnmUFkqreCmA="
+          "hash": "8YMCvMybQs/FF8mA5M5I74Xuo4Lk+h0WHSH78oQc1xg="
         }
       },
       "is_incremental": false,
@@ -64,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OmiyaGames.Template.html",
-          "hash": "jTiZqoyh834zijjFKSKPmvHkBdEOckjDIsBbh68wKTk="
+          "hash": "ioElDPFwns5Sw62bhXIx6cOyUa8WIB9i0stR76FHaO8="
         }
       },
       "is_incremental": false,
@@ -88,7 +88,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "TBTaNVI6BwGiwmTfvZelSIUQyNsMKjgUo05jE34jLJI="
+          "hash": "DxTpwqMZP3lqS7G5swvmWe7nNcP9tJvvykWAJ4XaE78="
         }
       },
       "is_incremental": false,
@@ -100,7 +100,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/README.html",
-          "hash": "QzJm+Rx13yRvXwNx0+BBv4PNYrBufLHu5Hi7Udpl+X8="
+          "hash": "4E66gA+LRQ8soZ7XkJ39yMIkw2QfIkyIGasOFpTno5I="
         }
       },
       "is_incremental": false,
@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/changelog.html",
-          "hash": "Ka4wAHB685pV5BCTNgrNPlDa83pihlBzpZClTNiY1CM="
+          "hash": "sRmNSqIVed/xQiG3Qjx1+Jtg97TxwLvsMX/VU06NEE4="
         }
       },
       "is_incremental": false,
@@ -124,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizeDocumentation.html",
-          "hash": "wdA4TpXnpiBZNl2bfGHT2H201CM7jLmwkEiRxpJ87Hc="
+          "hash": "c6NAvBjNqM23h2HN+3UDxs3viCUp4n7KoZnnrjPDllA="
         }
       },
       "is_incremental": false,
@@ -139,7 +139,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizePackage.html",
-          "hash": "hxLAhusO6rwfsv7KLxADf9yOAXBTn7ZWIbawcBOG/T0="
+          "hash": "1EZ7gQbGLYxhSxIGjzwiAvM9EwYVrAHreR0ag3CiVlk="
         }
       },
       "is_incremental": false,
@@ -151,7 +151,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizeSamples.html",
-          "hash": "18QZiwuaFgtN4mj90DHNGIqLoHGG6Ov2ybcqhwsbrbw="
+          "hash": "VRJuCMuqfUU+xKvrNnzLlhPpSwbq+Fk8iIwKrPOvzv8="
         }
       },
       "is_incremental": false,
@@ -163,7 +163,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/customizeSource.html",
-          "hash": "dq0m63pP+bas5HDzVifnz2IrezAzvF1vUMqoylfUo0o="
+          "hash": "8QZLNrfhcywgu6IbjjTeusVC2bQ+cSV+4QxPjSkPvuo="
         }
       },
       "is_incremental": false,
@@ -175,7 +175,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/structure.html",
-          "hash": "BS/arQwrAuSegfQzDsh16kJ2u5bxTAU4o4KmzVtUXNs="
+          "hash": "Uiiil5t1YeVC38Jy1j0QZN2VEN5eWTDk+6VflcEaOZQ="
         }
       },
       "is_incremental": false,
@@ -210,6 +210,17 @@
       "output": {
         "resource": {
           "relative_path": "resources/addingSecrets.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/configureGitHubPages.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/configureGitHubPages.png"
         }
       },
       "is_incremental": false,

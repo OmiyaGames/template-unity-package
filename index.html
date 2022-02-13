@@ -80,12 +80,7 @@
 <li>Click the &quot;Releases&quot; link, and download the latest archive as zip or gzip file.</li>
 </ul>
 <p>From there, consult the following documentation to get a better idea of what files should be edited and/or renamed, and how:</p>
-<ul>
-<li>This project&#39;s <a href="https://omiyagames.github.io/template-unity-package/">own documentation</a></li>
-<li><a href="https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/"><em>How to Split Up an Existing Unity Git Project into Smaller Unity Packages</em></a> by <a href="https://github.com/japtar10101">Taro Omiya</a></li>
-</ul>
-<h2 id="on-documentation">On Documentation</h2>
-<p>This package uses <a href="https://dotnet.github.io/docfx/">DocFX</a> and Github Actions to auto-generate its documentation from both the comments in the source code and the Markdown files in the <a href="/Documentation~"><code>Documentation~</code></a> directory.  There is also has a pre-made <a href="https://github.com/doxygen/doxygen">Doxygen</a> settings file in the same directory to run Doxywizard through.</p>
+<h2 id="documentation">Documentation</h2>
 <p>As there are many steps to developing a Unity package, the documentation is currently split into a couple of parts, each covering a specific feature or overview:</p>
 <ul>
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/structure.html">File and Folder Structure</a></li>
@@ -94,23 +89,28 @@
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html">Adding Importable Assets</a></li>
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html">Customizing Documentation</a></li>
 </ul>
+<p>The <a href="https://github.com/japtar10101">author</a> of this package also wrote a blog post on <a href="https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/"><em>How to Split Up an Existing Unity Git Project into Smaller Unity Packages</em></a>.</p>
 <p>Finally, changes in the project is documented under the <a href="https://omiyagames.github.io/template-unity-package/manual/changelog.html">change log page</a>.</p>
 <h2 id="install">Install</h2>
+<p>For ease of updating installation instructions in future projects, a template instruction is specified below.  Note that <a href="#through-openupm">instructions on using OpenUPM&#39;s</a> to install <em>this</em> template package is merely theoretical, as this project is not actually hosted in OpenUPM:</p>
 <p>There are two common methods for installing this package.</p>
-<h3 id="through-unity-package-managerhttpsdocsunity3dcommanualupm-ui-giturlhtml">Through <a href="https://docs.unity3d.com/Manual/upm-ui-giturl.html">Unity Package Manager</a></h3>
+<h3 id="through-openupmhttpsopenupmcom">Through <a href="https://openupm.com/">OpenUPM</a></h3>
+<p>Installing via <a href="https://openupm.com/">OpenUPM&#39;s command line tool</a> is recommended because it supports dependency resolution, upgrading, and downgrading this package.</p>
+<p>If you haven&#39;t already <a href="https://openupm.com/docs/getting-started.html#installing-openupm-cli">installed OpenUPM</a>, you can do so through Node.js&#39;s <code>npm</code> (obviously have Node.js installed in your system first):</p>
+<pre><code>npm install -g openupm-cli
+</code></pre><p>Then, to install this package, just run the following command at the root of your Unity project:</p>
+<pre><code>openupm add com.omiyagames.template
+</code></pre><h3 id="through-unity-package-managerhttpsdocsunity3dcommanualupm-ui-giturlhtml">Through <a href="https://docs.unity3d.com/Manual/upm-ui-giturl.html">Unity Package Manager</a></h3>
 <p>Unity&#39;s own Package Manager supports <a href="https://docs.unity3d.com/Manual/upm-ui-giturl.html">importing packages through a URL to a Git repo</a>:</p>
 <ol>
 <li>First, on this repository page, click the &quot;Clone or download&quot; button, and copy over this repository&#39;s HTTPS URL.  </li>
 <li>Then click on the + button on the upper-left-hand corner of the Package Manager, select &quot;Add package from git URL...&quot; on the context menu, then paste this repo&#39;s URL!</li>
 </ol>
-<p>While easy and straightforward, this method has a few major downside: it does not support dependency resolution and package upgrading when a new version is released.  To add support for that, the following method is recommended:</p>
-<h3 id="through-openupmhttpsopenupmcom">Through <a href="https://openupm.com/">OpenUPM</a></h3>
-<p>Installing via <a href="https://openupm.com/">OpenUPM&#39;s command line tool</a> is recommended because it supports dependency resolution, upgrading, and downgrading this package.  Given this package is just an example, thought, it hadn&#39;t been added into OpenUPM yet.  So the rest of these instructions are hypothetical...for now...</p>
-<p>If you haven&#39;t already <a href="https://openupm.com/docs/getting-started.html#installing-openupm-cli">installed OpenUPM</a>, you can do so through Node.js&#39;s <code>npm</code> (obviously have Node.js installed in your system first):</p>
-<pre><code>npm install -g openupm-cli
-</code></pre><p>Then, to install this package, just run the following command at the root of your Unity project:</p>
-<pre><code>openupm add com.omiyagames.template
-</code></pre><h2 id="resources">Resources</h2>
+<p>While easier to follow than the first method, this one does not support dependency resolution and package upgrading when a new version is released.  So proceed with caution.</p>
+<h2 id="generating-documentation-on-new-packages">Generating Documentation on New Packages</h2>
+<p>This package uses <a href="https://dotnet.github.io/docfx/">DocFX</a> and Github Actions to auto-generate its documentation from both the comments in the source code and the Markdown files in the <a href="/Documentation~"><code>Documentation~</code></a> directory.  If templated/forked on GitHub, the new project may be configured to host its own documentation by following the instructions specified in the <a href="https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html">Customizing Documentation</a> page.</p>
+<p>For other git hosting websites, there is also has a pre-made <a href="https://github.com/doxygen/doxygen">Doxygen</a> settings file in the same directory to run Doxywizard through.</p>
+<h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://omiyagames.github.io/template-unity-package/">Documentation</a></li>
 <li><a href="/CHANGELOG.md">Change Log</a></li>
@@ -146,7 +146,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2020 Omiya Games
+            Copyright © 2019-2022 Omiya Games
             
           </div>
         </div>

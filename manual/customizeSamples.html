@@ -85,9 +85,8 @@
   └── Samples~
       └── Example1
           └── Example.txt
-</code></pre><p>Per <a href="https://docs.unity3d.com/Manual/CustomPackages.html">Unity&#39;s documentation</a>, technically, the only required files in this section is <code>package.json</code> and at least one folder.  Furthermore, all folders do <em>not</em> have to be named the way they are, or put into hierarchy the way they are.  As Unity has not documented on their recommendation of where to place importable assets, <code>Samples~</code> will be used for this section, as the trailing <code>~</code> hides the folder from Unity Project Window&#39;s view.</p>
-<p>Note that if the project does <em>not</em> contain any importable assets, the folder <code>Samples~</code>, its subfolder, and content can be deleted safely.  Do not forget to update the <code>package.json</code> file accordingly, as detailed at the bottom of this section.</p>
-<p>This section will assume the developer <em>will</em> rename a few folders an files, and describe how to update the package to work with the new folder naming-scheme:</p>
+</code></pre><p>Per <a href="https://docs.unity3d.com/Manual/cus-samples.html">Unity&#39;s documentation</a>, the folder <code>Samples~</code> should contains any assets that can be imported from the package window.  If the developer intends to have one or more groups of assets importable from the package window, both the content of the <code>Samples~</code> folder and the <code>package.json</code> folder needs to be updated.  On the other hand, if a project does <em>not</em> contain any importable assets, the folder <code>Samples~</code>, its subfolder, and content can be deleted safely.  Do not forget to update the <code>package.json</code> file accordingly, as detailed at the bottom of this section.</p>
+<p>This section will assume the developer <em>will</em> edit, rather than remove, the content of <code>Samples~</code>, and thus will describe how to update the package to work with the new folder naming-scheme:</p>
 <h2 id="samples-folder"><code>Samples~</code> folder</h2>
 <p>This folder is intended contain assets that can be importaed from the Unity Package Manager window.  As a demonstration, the template contains one subfolder, <code>Example1</code>.  Since it and its content is obviously just a sample asset, it&#39;s recommended to delete this folder and update the Package Manifest accordingly (see the end of this section on how).</p>
 <p>If it hasn&#39;t been done so already, it&#39;s highly recommended to configure the Unity Editor to generate meta files.  For more information on Unity meta file settings, see <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/class-EditorManager.html">Unity&#39;s documentation</a> on Editor Manager.</p>
@@ -125,8 +124,7 @@
     &quot;path&quot;: &quot;Samples~/Examples&quot;
   }
 ]
-</code></pre><p>As of this writing, this field is not documented in Unity&#39;s official documentation yet.  Most likely, it means this field is still in experimental phases, and may change in the future.</p>
-</article>
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -154,7 +152,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2020 Omiya Games
+            Copyright © 2019-2022 Omiya Games
             
           </div>
         </div>

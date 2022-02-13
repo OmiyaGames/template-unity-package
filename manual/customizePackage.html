@@ -82,21 +82,20 @@
 <p>This part of the manual pertains to the following folders and files:</p>
 <pre><code>&lt;root&gt;
   ├── package.json
+  ├── .github
+  |   ├── FUNDING.yml
+  |   ├── ISSUE_TEMPLATE
+  |   |   ├── bug_report.md
+  |   |   ├── feature_request.md
+  |   |   ├── documentation-template.md
+  |   |   └── research_template.md
+  |   └── workflows
+  |       └── documentation.yml
   ├── README.md
   ├── CHANGELOG.md
   ├── LICENSE.md
   ├── THIRD PARTY NOTICES.md
-  ├── .gitignore
-  └── .github
-      ├── FUNDING.yml
-      ├── ISSUE_TEMPLATE
-      |   ├── bug_report.md
-      |   ├── feature_request.md
-      |   ├── documentation-template.md
-      |   └── research_template.md
-      └── workflows
-          ├── documentation.yml
-          └── mirror.yml
+  └── .gitignore
 </code></pre><p>Per <a href="https://docs.unity3d.com/Manual/CustomPackages.html">Unity&#39;s documentation</a>, technically, the only required file in this section is <code>package.json</code>.  Nonetheless, this template follows the standard set by <a href="https://docs.unity3d.com/Manual/cus-layout.html">Unity&#39;s documentation</a> to keep things consistent with other packages.  Plus, filling out the following files should help other developers better understand the purpose of the package:</p>
 <h2 id="package-manifest---packagejsonhttpsdocsunity3dcommanualupm-manifestpkghtml">Package Manifest - <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html"><code>package.json</code></a></h2>
 <p>This file is required: it should not be deleted, moved, or renamed.  That said, it <em>must</em> be edited.</p>
@@ -107,7 +106,7 @@
 </code></pre><p>This field is required, and <em>must</em> be changed.</p>
 <p>The <code>name</code> field is a unique identifier differentiating this package from potentially other packages with similar display names.  The string stored in this field should follow the classic <code>com.&lt;company-name&gt;.&lt;package-name&gt;</code> format.  Furthermore, it&#39;s recommended to keep the string below 50 characters in length.  For more information, check out <a href="https://docs.unity3d.com/Manual/upm-manifestPkg.html#name">Unity&#39;s documentation</a>.</p>
 <h3 id="version"><code>version</code></h3>
-<pre><code>&quot;version&quot;: &quot;0.1.0-preview.1&quot;,
+<pre><code>&quot;version&quot;: &quot;1.0.0-pre.1&quot;,
 </code></pre><p>This field is required.  Changing it is recommended, but not necessary.</p>
 <p>The <code>version</code> field informs the Unity Package Manager what version this package is on.  If a service like <a href="openupm.com">OpenUPM</a> is being used, this field further informs the Package Manager if the package is in need of an update.  Unity provides a pretty thorough explanation of <a href="https://docs.unity3d.com/Manual/upm-semver.html">how this field should be filled in</a>, but the classic <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code> should suffice here.  If in preview, don&#39;t forget to add <code>-preview.&lt;patch&gt;</code> as well.</p>
 <h3 id="displayname"><code>displayName</code></h3>
@@ -119,7 +118,7 @@
 </code></pre><p>While technically not required, this field should kept, and more importantly, <em>changed.</em></p>
 <p>When the Unity Package Manager displays a description of this package when selected, <code>description</code> is the field it&#39;ll use.  Simply provide a human-friendly description for this package to this field.  Note that UTF-8 characters are supported via <code>\u2603</code> and <code>\n</code>.</p>
 <h3 id="unity"><code>unity</code></h3>
-<pre><code>&quot;unity&quot;: &quot;2019.3&quot;,
+<pre><code>&quot;unity&quot;: &quot;2021.2&quot;,
 </code></pre><p>While technically not required, this field should kept.  Changing it is recommended, but not necessary.</p>
 <p>Indicates the lowest version of Unity this package supports.  If patch release info is necessary as well (e.g. Unity 2019.3.7f3), the last set of digits can be added to <code>unityRelease</code> field.</p>
 <h3 id="type"><code>type</code></h3>
@@ -155,14 +154,6 @@
 <p>As this field is critical for adding importable assets to the package, more information is available at the <a href="https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html">Adding Importable Assets</a> section of this manual.</p>
 <h2 id="github-specific-features---github-folder">Github-Specific Features - <code>.github</code> Folder</h2>
 <p>Files in the <code>.github</code> folder are intended for Github-specific features, including templates for its bug-tracking system (folder <code>ISSUE_TEMPLATE</code>), list of websites to sponsor the package (file <code>FUNDING.yml</code>), and automation feature under <code>workflows</code> folder.  Obviously, if the repo is <em>not</em> hosted on Github, this folder and its content can be safely deleted.  If the developer <em>does</em> want to utilize some of the features this template comes with, the purpose of each file or folder will be listed below:</p>
-<h3 id="githubworkflowsmirroryml"><code>.github/workflows/mirror.yml</code></h3>
-<p>This YAML file instructs Github to automatically push any changes made to this online repository to other mirrors.  It&#39;s frankly recommended to delete this file, as most developers won&#39;t need it.  If the developer is interested in mirroring, the subject is fairly large and out-of-scope for this manual, but the following resources should help give direction:</p>
-<ul>
-<li><a href="https://github.com/marketplace/actions/mirroring-repository">Github Action page</a></li>
-<li><a href="https://developer.github.com/v3/guides/managing-deploy-keys/">Managing deploy keys</a></li>
-<li><a href="https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets">Adding secrets</a></li>
-</ul>
-<p>Also, don&#39;t forget to review the content of the file itself, as it does provide some comments to help give directions.</p>
 <h3 id="githubworkflowsdocumentationyml"><code>.github/workflows/documentation.yml</code></h3>
 <p>This YAML file instructs Github to automatically generate a documentation website.  For those who would like to take advantange of this feature, the <a href="https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html">Customizing Documentation</a> section of this manual covers this file extensively.  Obviously, if the developer has no plans on generating documentation for their package, this file can be safely deleted.</p>
 <h3 id="githubfundingyml"><code>.github/FUNDING.yml</code></h3>
@@ -171,7 +162,7 @@
 <p>The markdown files in the <code>.github/ISSUE_TEMPLATE</code> holds templates for issues one can file on Github, providing a standard for the issue filer.  As markdown files, the files should be human-readable, and its content won&#39;t be futher elaborated on this manual.  As usual, if there&#39;s no need for any or all templates in this folder, the folder or individual files themselver may be safely deleted.</p>
 <h2 id="readme---readmemd">ReadMe - <code>README.md</code></h2>
 <p>It&#39;s recommended to edit this file.</p>
-<p>As the name of the file implies, <code>README.md</code> is a Markdown file intended to inform first-time viewers of this package&#39;s source what the purpose of the package is, and provide guidance on maintainers where the important files are.  It has the added bonus that most online repository websites displays this Markdown file as an in-depth description of the project as a whole.</p>
+<p>As the name of the file implies, <code>README.md</code> is a Markdown file intended to inform first-time viewers of this package&#39;s source what the purpose of the package is, and provide guidance on maintainers where the important files are.  It has the added bonus that most online repository websites displays this Markdown file as an in-depth description of the project as a whole.  Lastly, if <a href="#githubworkflowsdocumentationyml"><code>.github/workflows/documentation.yml</code></a> is configured to generate documentation, it will use <code>README.md</code> as the homepage.</p>
 <h2 id="package-license---licensemd">Package License - <code>LICENSE.md</code></h2>
 <p>It&#39;s recommended to edit this file.</p>
 <p>As the name of the file implies, <code>LICENSE.md</code> is a Markdown file describing the license of the package overall.  It has the added bonus that some open-source-encouraging online repository websites uses this file to indicate developers the license of the project.  If there are assets borrowed from third-party sources, it is recommended to list those in <code>THIRD PARTY NOTICES.md</code>.</p>
@@ -212,7 +203,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2020 Omiya Games
+            Copyright © 2019-2022 Omiya Games
             
           </div>
         </div>

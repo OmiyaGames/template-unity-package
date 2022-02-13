@@ -89,6 +89,7 @@
   |   ├── filterConfig.yml
   |   ├── manual
   |   |   ├── toc.yml
+  |   |   ├── structure.md
   |   |   ├── customizeDocumentation.md
   |   |   ├── customizePackage.md
   |   |   ├── customizeSamples.md
@@ -120,28 +121,39 @@
 <p>The <code>Build</code> line is probably where most developers would be most interested in:</p>
 <pre><code class="lang-yaml">- name: Build
   run: |
+    cp README.md Documentation~/index.md
     cp CHANGELOG.md Documentation~/manual/changelog.md
     docfx Documentation~/docfx.json
-</code></pre><p>The <code>run</code> string describes the Batch commands that gets run in a windows VM.  As one can see, the above line copies the <code>CHANGELOG.md</code> file into <code>Documentation~/manual/changelog.md</code>, before running the <code>docfx</code> command at the last line to generate the documentation.  This multiline string can be updated to copy or change other documentation files.  For example, the developer may want to copy the <code>README.md</code> file at the root of the package to  <code>Documentation~/manual/index.md</code>, so that when DocFX runs, the homepage will look exactly like the <code>README.md</code> file.  In that case, it would be helpful to edit this file as:</p>
-<pre><code class="lang-yaml">- name: Build
-  run: |
-    cp README.md Documentation~/manual/index.md
-    cp CHANGELOG.md Documentation~/manual/changelog.md
-    docfx Documentation~/docfx.json
-</code></pre><p>Of course, if the developer chooses to make this edit, they should also delete the <code>Documentation~/manual/index.md</code> file, and add a line in <code>.gitignore</code> to ignore this file.</p>
+</code></pre><p>The <code>run</code> string describes the Batch commands that gets run in a windows VM.  As one can see, the above line copies <code>README.md</code> file into <code>Documentation~/index.md</code>, and <code>CHANGELOG.md</code> file into <code>Documentation~/manual/changelog.md</code>.  Finally, it runs the <code>docfx</code> command at the last line to generate the documentation.  This multiline string can be updated to copy or change other documentation files.  For example, the developer may opt to draft their own homepage instead of copying <code>README.md</code> file from the package.  In that case, simply do the following:</p>
+<ol>
+<li>Create the file, <code>Documentation~/index.md</code>, and fill it with the desired content.</li>
+<li>Edit <code>.github/workflows/documentation.yml</code> with the <code>name: Build</code> line reading as:
+ ```yaml<ul>
+<li>name: Build
+run: |
+  cp CHANGELOG.md Documentation~/manual/changelog.md
+  docfx Documentation~/docfx.json
+```</li>
+</ul>
+</li>
+<li>(Optional) Remove the line, <code>Documentation~/index.*</code> from <code>.gitignore</code> so that changes in <code>Documentation~/index.md</code> will be properly tracked.</li>
+</ol>
 <p>After this line is updated to the developer&#39;s satisfaction, the repository must be configured to provide the Github access to the repo itself.</p>
 <h3 id="creating-secret-access-key">Creating Secret Access Key</h3>
-<p>To give Github Actions access to the package&#39;s repository, a private key must be created and shared.</p>
+<p>To give Github Actions access to the package&#39;s repository, a private key must be created and shared (this key is used user/organization-wide.)  If one hasn&#39;t been created yet, follow the instructions below.</p>
 <ol>
-<li>If the developer hasn&#39;t done this step already, go to <a href="https://github.com/settings/tokens">&quot;Settings -&gt; Developer Settings -&gt; Personal access token,&quot;</a> and generate a new token with full access to <code>repo</code>.  Don&#39;t forget to copy the secret key printed on the new entry in a safe location.<ul>
-<li><img src="https://omiyagames.github.io/template-unity-package/resources/personalAccessToken.png" alt="Personal Access Token"></li>
-</ul>
-</li>
-<li>Return to the Github repository, then go to &quot;Settings -&gt; Secrets,&quot; and add the generated key into the list.  Remember to name this key as, <code>AccessToken</code>.<ul>
-<li><img src="https://omiyagames.github.io/template-unity-package/resources/addingSecrets.png" alt="Add Secret"></li>
-</ul>
-</li>
-<li>Finally, push the repository to the master branch to deploy the automated commands!  A new breanch, <code>gh-pages</code>, and website, <code>https://&lt;username&gt;.github.io/&lt;repo-name&gt;/</code> will be created as part of this process.</li>
+<li>If the developer hasn&#39;t done this step already, go to <a href="https://github.com/settings/tokens">&quot;Settings -&gt; Developer Settings -&gt; Personal access token,&quot;</a> and generate a new token with full access to <code>repo</code>.  Don&#39;t forget to copy the secret key printed on the new entry in a safe location.
+<img src="https://omiyagames.github.io/template-unity-package/resources/personalAccessToken.png" alt="Personal Access Token"></li>
+<li>Return to the Github repository, then go to &quot;Settings -&gt; Secrets,&quot; and add the generated key into the list.  Remember to name this key as, <code>AccessToken</code>.
+<img src="https://omiyagames.github.io/template-unity-package/resources/addingSecrets.png" alt="Add Secret"></li>
+</ol>
+<p>Once a key is available, each project simply needs to configure their project to point to the generated documentation:</p>
+<ol>
+<li>Push the repository to the master branch to deploy the automated commands, then wait until the command finished (the orange dot next to the commit hash will change to a green checkmark.)</li>
+<li>Click on <code>Settings</code> below the project&#39;s name (marked as #1 in the screenshot below), then <code>Pages</code> on the left sidebar (#2.)</li>
+<li>Click on <code>Branch: None</code> to expand its selection (#3.)  Observe that <code>gh-pages</code> should now be selectable.  Click on <code>gh-pages</code> (#4.)</li>
+<li>Click the <code>Save</code> button.  This may take a while; wait until the notification above the controls turn into a green checkmark
+ <img src="https://omiyagames.github.io/template-unity-package/resources/configureGitHubPages.png" alt="Configure GitHub Pages"></li>
 </ol>
 <p>For more information, check the <a href="https://github.com/JamesIves/github-pages-deploy-action">Github Pages Deploy Action documentation</a>.</p>
 <h2 id="docfx-support">DocFX Support</h2>
@@ -153,7 +165,7 @@
 <p><code>globalMetadata</code> refers to this part in the <code>docfx.json</code> files:</p>
 <pre><code class="lang-json">&quot;globalMetadata&quot;: {
     &quot;_appTitle&quot;: &quot;Template Unity Package documentation&quot;,
-    &quot;_appFooter&quot;: &quot;Copyright © 2020 Omiya Games&quot;,
+    &quot;_appFooter&quot;: &quot;Copyright © 2019-2022 Omiya Games&quot;,
     &quot;_enableSearch&quot;: true
 },
 </code></pre><p>As one can probably guess from the object&#39;s key names, the value under <code>_appTitle</code> is printed at the top of the website, and the value under <code>_appFooter</code> is printed at the bottom as a footer.  It&#39;s obviously recommended to change these values to what matches with the developer&#39;s package name and company respectively.</p>
@@ -189,13 +201,15 @@
 <p><code>toc.yml</code> is the table of contents YAML file that supports formatting that looks like this:</p>
 <pre><code class="lang-yaml">- name: Customizing Package
   items:
-  - name: Package Files
+  - name: Package Structure
+    href: structure.md
+  - name: Customizing Package Files
     href: customizePackage.md
-  - name: Source Code and Assets
+  - name: Adding Source Code and Assets
     href: customizeSource.md
-  - name: Importable Assets
+  - name: Adding Importable Assets
     href: customizeSamples.md
-  - name: Documentation
+  - name: Customizing Documentation
     href: customizeDocumentation.md
 - name: Change Log
   href: changelog.md
@@ -247,7 +261,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2020 Omiya Games
+            Copyright © 2019-2022 Omiya Games
             
           </div>
         </div>
