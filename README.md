@@ -28,6 +28,8 @@ As there are many steps to developing a Unity package, the documentation is curr
 
 Finally, changes in the project is documented under the [change log page](https://omiyagames.github.io/template-unity-package/manual/changelog.html).
 
+For ease of updating installation instructions in future projects, a template instruction is specified below:
+
 ## Install
 
 There are two common methods for installing this package.
@@ -43,7 +45,7 @@ While easy and straightforward, this method has a few major downside: it does no
 
 ### Through [OpenUPM](https://openupm.com/)
 
-Installing via [OpenUPM's command line tool](https://openupm.com/) is recommended because it supports dependency resolution, upgrading, and downgrading this package.  Given this package is just an example, thought, it hadn't been added into OpenUPM yet.  So the rest of these instructions are hypothetical...for now...
+Installing via [OpenUPM's command line tool](https://openupm.com/) is recommended because it supports dependency resolution, upgrading, and downgrading this package.  Note: the instructions below are merely hypothetical, as this project is not actually hosted in OpenUPM.
 
 If you haven't already [installed OpenUPM](https://openupm.com/docs/getting-started.html#installing-openupm-cli), you can do so through Node.js's `npm` (obviously have Node.js installed in your system first):
 ```
