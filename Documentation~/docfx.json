@@ -15,7 +15,7 @@
     "build": {
         "globalMetadata": {
             "_appTitle": "Template Unity Package documentation",
-            "_appFooter": "Copyright © 2020 Omiya Games",
+            "_appFooter": "Copyright © 2019-2022 Omiya Games",
             "_enableSearch": true
         },
         "content": [

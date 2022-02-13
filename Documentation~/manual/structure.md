@@ -1,15 +1,14 @@
-# Structure
+# Package Structure
 
 The project follows [Unity's recommend file and folder format](https://docs.unity3d.com/Manual/cus-layout.html), albeit with a few changes:
 
-```
+```text
 <root>
   ├── package.json
   ├── README.md
   ├── CHANGELOG.md
   ├── LICENSE.md
   ├── THIRD PARTY NOTICES.md
-  ├── .gitignore
   ├── Runtime
   │   ├── OmiyaGames.Template.asmdef
   │   └── RuntimeExample.cs
@@ -27,20 +26,24 @@ The project follows [Unity's recommend file and folder format](https://docs.unit
   │   └── Example1
   │       └── Example.txt
   ├── Documentation~
-  |   ├── index.md
   |   ├── Doxyfile
   |   ├── docfx.json
   |   ├── toc.yml
   |   ├── filterConfig.yml
   |   ├── manual
   |   |   ├── toc.yml
+  |   |   ├── structure.md
   |   |   ├── customizeDocumentation.md
   |   |   ├── customizePackage.md
   |   |   ├── customizeSamples.md
   |   |   └── README.md
   |   └── resources
   |       ├── preview.png
+  |       ├── samples.png
+  |       ├── addingSecrets.png
+  |       ├── personalAccessToken.png
   |       └── README.md
+  ├── .gitignore
   └── .github
       ├── FUNDING.yml
       ├── ISSUE_TEMPLATE
@@ -49,8 +52,7 @@ The project follows [Unity's recommend file and folder format](https://docs.unit
       |   ├── documentation-template.md
       |   └── research_template.md
       └── workflows
-          ├── documentation.yml
-          └── mirror.yml
+          └── documentation.yml
 ```
 
 ## Common Text Formats

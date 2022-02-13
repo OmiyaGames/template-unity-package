@@ -1,9 +1,9 @@
 {
   "name": "com.omiyagames.template",
   "displayName": "Omiya Games - Template Unity Package",
-  "version": "0.1.0-preview.1",
-  "unity": "2019.3",
-  "unityRelease": "7f1",
+  "version": "1.0.0-pre.1",
+  "unity": "2021.2",
+  "unityRelease": "11f1",
   "description": "This is a template package, used as a basis to build a bigger one.",
   "category": "Tool",
   "type": "tool",

@@ -10,11 +10,9 @@ This part of the manual pertains to the following folders and files:
           └── Example.txt
 ```
 
-Per [Unity's documentation](https://docs.unity3d.com/Manual/CustomPackages.html), technically, the only required files in this section is `package.json` and at least one folder.  Furthermore, all folders do *not* have to be named the way they are, or put into hierarchy the way they are.  As Unity has not documented on their recommendation of where to place importable assets, `Samples~` will be used for this section, as the trailing `~` hides the folder from Unity Project Window's view.
+Per [Unity's documentation](https://docs.unity3d.com/Manual/cus-samples.html), the folder `Samples~` should contains any assets that can be imported from the package window.  If the developer intends to have one or more groups of assets importable from the package window, both the content of the `Samples~` folder and the `package.json` folder needs to be updated.  On the other hand, if a project does *not* contain any importable assets, the folder `Samples~`, its subfolder, and content can be deleted safely.  Do not forget to update the `package.json` file accordingly, as detailed at the bottom of this section.
 
-Note that if the project does *not* contain any importable assets, the folder `Samples~`, its subfolder, and content can be deleted safely.  Do not forget to update the `package.json` file accordingly, as detailed at the bottom of this section.
-
-This section will assume the developer *will* rename a few folders an files, and describe how to update the package to work with the new folder naming-scheme:
+This section will assume the developer *will* edit, rather than remove, the content of `Samples~`, and thus will describe how to update the package to work with the new folder naming-scheme:
 
 ## `Samples~` folder
 
@@ -67,4 +65,3 @@ If, for example, there are two sample folders, `Samples~/Required` and `Samples~
   }
 ]
 ```
-As of this writing, this field is not documented in Unity's official documentation yet.  Most likely, it means this field is still in experimental phases, and may change in the future.

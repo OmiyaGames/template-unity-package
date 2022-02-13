@@ -5,21 +5,20 @@ This part of the manual pertains to the following folders and files:
 ```
 <root>
   ├── package.json
+  ├── .github
+  |   ├── FUNDING.yml
+  |   ├── ISSUE_TEMPLATE
+  |   |   ├── bug_report.md
+  |   |   ├── feature_request.md
+  |   |   ├── documentation-template.md
+  |   |   └── research_template.md
+  |   └── workflows
+  |       └── documentation.yml
   ├── README.md
   ├── CHANGELOG.md
   ├── LICENSE.md
   ├── THIRD PARTY NOTICES.md
-  ├── .gitignore
-  └── .github
-      ├── FUNDING.yml
-      ├── ISSUE_TEMPLATE
-      |   ├── bug_report.md
-      |   ├── feature_request.md
-      |   ├── documentation-template.md
-      |   └── research_template.md
-      └── workflows
-          ├── documentation.yml
-          └── mirror.yml
+  └── .gitignore
 ```
 
 Per [Unity's documentation](https://docs.unity3d.com/Manual/CustomPackages.html), technically, the only required file in this section is `package.json`.  Nonetheless, this template follows the standard set by [Unity's documentation](https://docs.unity3d.com/Manual/cus-layout.html) to keep things consistent with other packages.  Plus, filling out the following files should help other developers better understand the purpose of the package:
@@ -42,7 +41,7 @@ The `name` field is a unique identifier differentiating this package from potent
 
 ### `version`
 ```
-"version": "0.1.0-preview.1",
+"version": "1.0.0-pre.1",
 ```
 This field is required.  Changing it is recommended, but not necessary.
 
@@ -66,7 +65,7 @@ When the Unity Package Manager displays a description of this package when selec
 
 ### `unity`
 ```
-"unity": "2019.3",
+"unity": "2021.2",
 ```
 While technically not required, this field should kept.  Changing it is recommended, but not necessary.
 
@@ -120,16 +119,6 @@ As this field is critical for adding importable assets to the package, more info
 
 Files in the `.github` folder are intended for Github-specific features, including templates for its bug-tracking system (folder `ISSUE_TEMPLATE`), list of websites to sponsor the package (file `FUNDING.yml`), and automation feature under `workflows` folder.  Obviously, if the repo is *not* hosted on Github, this folder and its content can be safely deleted.  If the developer *does* want to utilize some of the features this template comes with, the purpose of each file or folder will be listed below:
 
-### `.github/workflows/mirror.yml`
-
-This YAML file instructs Github to automatically push any changes made to this online repository to other mirrors.  It's frankly recommended to delete this file, as most developers won't need it.  If the developer is interested in mirroring, the subject is fairly large and out-of-scope for this manual, but the following resources should help give direction:
-
-- [Github Action page](https://github.com/marketplace/actions/mirroring-repository)
-- [Managing deploy keys](https://developer.github.com/v3/guides/managing-deploy-keys/)
-- [Adding secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
-
-Also, don't forget to review the content of the file itself, as it does provide some comments to help give directions.
-
 ### `.github/workflows/documentation.yml`
 
 This YAML file instructs Github to automatically generate a documentation website.  For those who would like to take advantange of this feature, the [Customizing Documentation](https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html) section of this manual covers this file extensively.  Obviously, if the developer has no plans on generating documentation for their package, this file can be safely deleted.
@@ -146,7 +135,7 @@ The markdown files in the `.github/ISSUE_TEMPLATE` holds templates for issues on
 
 It's recommended to edit this file.
 
-As the name of the file implies, `README.md` is a Markdown file intended to inform first-time viewers of this package's source what the purpose of the package is, and provide guidance on maintainers where the important files are.  It has the added bonus that most online repository websites displays this Markdown file as an in-depth description of the project as a whole.
+As the name of the file implies, `README.md` is a Markdown file intended to inform first-time viewers of this package's source what the purpose of the package is, and provide guidance on maintainers where the important files are.  It has the added bonus that most online repository websites displays this Markdown file as an in-depth description of the project as a whole.  Lastly, if [`.github/workflows/documentation.yml`](#githubworkflowsdocumentationyml) is configured to generate documentation, it will use `README.md` as the homepage.
 
 ## Package License - `LICENSE.md`
 

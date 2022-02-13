@@ -2,7 +2,7 @@
 
 This part of the manual pertains to the following folders and files:
 
-```
+```text
 <root>
   ├── package.json
   ├── Runtime
@@ -67,11 +67,17 @@ If the entire `Runtime` folder and content isn't deleted, this file *must* be re
 This is the file that will group the source code in the `Runtime` folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package's unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  After renaming the file, the following fields in it should be updated:
 
 - `name`: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.
-- `references`: list of C# projects the source code depends on.  The name of each project should be the same as the `name` field in the Assembly Definition file in said dependencies.
 - `includePlatforms`: a list of platforms this project supports.  Keep the list empty if all platforms should be supported.
 - `excludePlatforms`: a list of platforms this project *does not* supports.  Keep the list empty if all platforms should be supported.
+- `references`: list of C# projects the source code depends on.  Each entry is a string starting with `GUID:`, followed by the GUID contained in the Assembly Definition's corresponding `*.meta` file.  Notation will appear something like:
+```json
+"references": [
+    "GUID:9e24947de15b9631991c9d8411ea37cf",
+    "GUID:de7529f634fa83eb59756ad332cd358f"
+],
+```
 
-Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window, or a typical text editor.  Don't forget to check out [Unity's documentation](https://docs.unity3d.com/Manual/cus-asmdef.html) for more information on the rest of the fields in the file!
+Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window (which makes editing `references` easier,) or a typical text editor.  Don't forget to check out [Unity's documentation](https://docs.unity3d.com/Manual/cus-asmdef.html) for more information on the rest of the fields in the file!
 
 #### Sample Code - `Runtime/RuntimeExample.cs`
 
@@ -92,9 +98,15 @@ If the entire `Editor` folder and content isn't deleted, this file *must* be ren
 This is the file that will group the source code in the `Editor` folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package's unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  If the `Runtime` folder still exists, don't forget to add `.Editor` in the file name as well to differentiate the two.  After renaming the file, the following fields in it should be updated:
 
 - `name`: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.
-- `references`: list of C# projects the source code depends on.  The name of each project should be the same as the `name` field in the Assembly Definition file in said dependencies.  If the `Runtime` folder exists, don't forget to add the `name` of the corresponding Assembly Definition files in this list as well.
+- `references`: list of C# projects the source code depends on.  Each entry is a string starting with `GUID:`, followed by the GUID contained in the Assembly Definition's corresponding `*.meta` file.  If the `Runtime` folder exists, don't forget to add it's Assembly Definition file's GUID as well.  Notation will appear something like:
+```json
+"references": [
+    "GUID:9e24947de15b9631991c9d8411ea37cf",
+    "GUID:de7529f634fa83eb59756ad332cd358f"
+],
+```
 
-Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window, or a typical text editor.  Note that the fields, `includePlatforms` and `excludePlatforms` should already be set properly.  Don't forget to check out [Unity's documentation](https://docs.unity3d.com/Manual/cus-asmdef.html) for more information on the rest of the fields in the file!
+Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window (which makes editing `references` easier,) or a typical text editor.  Note that the fields, `includePlatforms` and `excludePlatforms` should already be set properly.  Don't forget to check out [Unity's documentation](https://docs.unity3d.com/Manual/cus-asmdef.html) for more information on the rest of the fields in the file!
 
 #### Sample Code - `Editor/EditorExample.cs`
 
@@ -108,21 +120,6 @@ This folder and its two subfolders, `Tests/Editor` and `Tests/Runtime`, is inten
 
 If there are no plans to add unit tests into this project (e.g. plugins that already have one in a separate project), it is safe to delete this folder and its content.  Alternatively, if there are no plans to run tests in the `Runtime` scope, the subfolder, `Tests/Runtime` can be safely deleted; same story for `Editor` and `Tests/Editor`.
 
-#### Editor Test Assembly Definition - [`Tests/Editor/OmiyaGames.Template.Editor.Tests.asmdef`](https://docs.unity3d.com/Manual/cus-asmdef.html)
-
-If the entire `Tests/Editor` folder and content isn't deleted, this file *must* be renamed and edited.
-
-This is the file that will group the unit tests in the `Tests/Editor` folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package's unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  Don't forget to add `.Editor.Tests` in the file name to differentiate it from the rest of the assembly definition files.  After renaming the file, the following fields in it should be updated:
-
-- `name`: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.
-- `references`: list of C# projects the unit tests depends on.  The name of each project should be the same as the `name` field in the Assembly Definition file in said dependencies.  Don't forget to add the `name` of the `Runtime` and/or `Editor` Assembly Definition files in this list as well.
-
-Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window, or a typical text editor.  Note that the fields, `includePlatforms` and `excludePlatforms` should already be set properly.  Furthermore, if the Unity Inspector is used to edit this file, do *not* remove `UnityEngine.TestRunner` and `UnityEditor.TestRunner` from the `references` field.  Don't forget to check out [Unity's documentation](https://docs.unity3d.com/Manual/cus-asmdef.html) for more information on the rest of the fields in the file!
-
-#### Editor Sample Unit Test - `Tests/Editor/EditorExampleTest.cs`
-
-A simple NUnit test script.  Since it's obviously just a sample file, it's recommended to delete this code.
-
 #### Runtime Test Assembly Definition - [`Tests/Editor/OmiyaGames.Template.Tests.asmdef`](https://docs.unity3d.com/Manual/cus-asmdef.html)
 
 If the entire `Tests/Runtime` folder and content isn't deleted, this file *must* be renamed and edited.
@@ -130,13 +127,40 @@ If the entire `Tests/Runtime` folder and content isn't deleted, this file *must*
 This is the file that will group the unit tests in the `Tests/Runtime` folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package's unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  Don't forget to add `.Tests` in the file name to differentiate it from the rest of the assembly definition files.  After renaming the file, the following fields in it should be updated:
 
 - `name`: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.
-- `references`: list of C# projects the unit tests depends on.  The name of each project should be the same as the `name` field in the Assembly Definition file in said dependencies.  Don't forget to add the `name` of the `Runtime` Assembly Definition files in this list as well.
 - `includePlatforms`: a list of platforms this project supports.  Keep blank if all platforms should be supported.
 - `excludePlatforms`: a list of platforms this project *does not* supports.  Keep blank if all platforms should be supported.
+- `references`: list of C# projects the source code depends on.  Each entry is a string starting with `GUID:`, followed by the GUID contained in the Assembly Definition's corresponding `*.meta` file.  Don't forget to add the `Runtime`'s Assembly Definition file's GUID as well.  Notation will appear something like:
+```json
+"references": [
+    "GUID:9e24947de15b9631991c9d8411ea37cf",
+    "GUID:de7529f634fa83eb59756ad332cd358f"
+],
+```
 
-Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window, or a typical text editor.  If the Unity Inspector is used to edit this file, do *not* remove `UnityEngine.TestRunner` and `UnityEditor.TestRunner` from the `references` field.  Don't forget to check out [Unity's documentation](https://docs.unity3d.com/Manual/cus-asmdef.html) for more information on the rest of the fields in the file!
+Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window (which makes editing `references` easier,) or a typical text editor.  If the Unity Inspector is used to edit this file, do *not* remove `UnityEngine.TestRunner` and `UnityEditor.TestRunner` from the `references` field.  Don't forget to check out [Unity's documentation](https://docs.unity3d.com/Manual/cus-asmdef.html) for more information on the rest of the fields in the file!
 
 #### Runtime Sample Unit Test - `Tests/Editor/RuntimeExampleTest.cs`
 
 A simple NUnit test script.  Since it's obviously just a sample file, it's recommended to delete this code.
 
+
+#### Editor Test Assembly Definition - [`Tests/Editor/OmiyaGames.Template.Editor.Tests.asmdef`](https://docs.unity3d.com/Manual/cus-asmdef.html)
+
+If the entire `Tests/Editor` folder and content isn't deleted, this file *must* be renamed and edited.
+
+This is the file that will group the unit tests in the `Tests/Editor` folder into a single C# project, separating it from the rest of the folders in the package, as well as the Unity project when this package gets imported.  The file name, which needs to be unique, should be changed to match either the package's unique identifier with capitalization, or the namespace the scripts are scoped in (preferably both).  Don't forget to add `.Editor.Tests` in the file name to differentiate it from the rest of the assembly definition files.  After renaming the file, the following fields in it should be updated:
+
+- `name`: must be unique from other Assembly Definition files.  Recommended to be updated to match the namespace the scripts are scoped in.
+- `references`: list of C# projects the source code depends on.  Each entry is a string starting with `GUID:`, followed by the GUID contained in the Assembly Definition's corresponding `*.meta` file.  Don't forget to add the `Runtime`'s and/or `Editor`'s Assembly Definition file's GUID as well.  Notation will appear something like:
+```json
+"references": [
+    "GUID:9e24947de15b9631991c9d8411ea37cf",
+    "GUID:de7529f634fa83eb59756ad332cd358f"
+],
+```
+
+Editing this file can be done in the Unity Inspector window, when the file is selected in the Project window (which makes editing `references` easier,) or a typical text editor.  Note that the fields, `includePlatforms` and `excludePlatforms` should already be set properly.  Furthermore, if the Unity Inspector is used to edit this file, do *not* remove `UnityEngine.TestRunner` and `UnityEditor.TestRunner` from the `references` field.  Don't forget to check out [Unity's documentation](https://docs.unity3d.com/Manual/cus-asmdef.html) for more information on the rest of the fields in the file!
+
+#### Editor Sample Unit Test - `Tests/Editor/EditorExampleTest.cs`
+
+A simple NUnit test script.  Since it's obviously just a sample file, it's recommended to delete this code.
