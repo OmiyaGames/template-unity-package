@@ -21,16 +21,12 @@ jobs:
       - name: Install DocFX
         run: choco install -y docfx
 
-      # Taro Omiya here, want to copy a different file instead of README
+      # Copy over a few markdown files before generating the documentation
       - name: Build
         run: |
+          cp README.md Documentation~/index.md
           cp CHANGELOG.md Documentation~/manual/changelog.md
           docfx Documentation~/docfx.json
-      # Below is the original instructions by Erwan Normand
-      # - name: Build
-      #   run: |
-      #     cp README.md Documentation~/index.md
-      #     docfx Documentation~/docfx.json
 
       # Upload the generated documentation
       - name: Upload site artifact

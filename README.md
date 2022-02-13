@@ -14,7 +14,19 @@ From there, consult the following documentation to get a better idea of what fil
 - This project's [own documentation](https://omiyagames.github.io/template-unity-package/)
 - [*How to Split Up an Existing Unity Git Project into Smaller Unity Packages*](https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/) by [Taro Omiya](https://github.com/japtar10101)
 
-This package uses [DocFX](https://dotnet.github.io/docfx/) and Github Actions to auto-generate its documentation from both the comments in the source code and the Markdown files in the [`Documentation~`](/Documentation~) directory.  Consult the manual on [customizing documentation files](https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html) for your own packages.  There is also has a pre-made [Doxygen](https://github.com/doxygen/doxygen) settings file in the same directory to run Doxywizard through.
+## On Documentation
+
+This package uses [DocFX](https://dotnet.github.io/docfx/) and Github Actions to auto-generate its documentation from both the comments in the source code and the Markdown files in the [`Documentation~`](/Documentation~) directory.  There is also has a pre-made [Doxygen](https://github.com/doxygen/doxygen) settings file in the same directory to run Doxywizard through.
+
+As there are many steps to developing a Unity package, the documentation is currently split into a couple of parts, each covering a specific feature or overview:
+
+- [File and Folder Structure](https://omiyagames.github.io/template-unity-package/manual/structure.html)
+- [Customizing Package Files](https://omiyagames.github.io/template-unity-package/manual/customizePackage.html)
+- [Adding Source Code and Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSource.html)
+- [Adding Importable Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html)
+- [Customizing Documentation](https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html)
+
+Finally, changes in the project is documented under the [change log page](https://omiyagames.github.io/template-unity-package/manual/changelog.html).
 
 ## Install
 
