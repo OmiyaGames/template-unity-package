@@ -1,5 +1,11 @@
 # Change Log:
 
+## 1.4.4
+
+- Enhancement: Updating `package.json` version number to `1.0.0-pre.1`, per latest Unity standard.
+- Enhancement: Updating documentation to the latest folder structure and content specs, such as linking to the `Samples~` section in the Unity's documentation instead of saying, "as of this writing, there is no official documentation" (when there obviously is, now.)
+- Bug Fix: forgot to ignore `Documentation~/index.md`.
+
 ## 1.4.3
 
 - Enhancement: restructuring the documentation so that the [`README.md`](/README.md) at the root of the project becomes the homepage of the DocFX-generated documentation.  The old `index.md` has now been added to `Documentation~/manual` folder, as the first page describing the content of this package.  This should make updating documentation easier for future projects, as only the `README.md` file needs to be updated to change the homepage.
