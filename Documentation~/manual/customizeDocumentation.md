@@ -12,6 +12,7 @@ This part of the manual pertains to the following folders and files:
   |   ├── filterConfig.yml
   |   ├── manual
   |   |   ├── toc.yml
+  |   |   ├── structure.md
   |   |   ├── customizeDocumentation.md
   |   |   ├── customizePackage.md
   |   |   ├── customizeSamples.md
@@ -60,33 +61,41 @@ The `Build` line is probably where most developers would be most interested in:
 ```yaml
 - name: Build
   run: |
+    cp README.md Documentation~/index.md
     cp CHANGELOG.md Documentation~/manual/changelog.md
     docfx Documentation~/docfx.json
 ```
 
-The `run` string describes the Batch commands that gets run in a windows VM.  As one can see, the above line copies the `CHANGELOG.md` file into `Documentation~/manual/changelog.md`, before running the `docfx` command at the last line to generate the documentation.  This multiline string can be updated to copy or change other documentation files.  For example, the developer may want to copy the `README.md` file at the root of the package to  `Documentation~/manual/index.md`, so that when DocFX runs, the homepage will look exactly like the `README.md` file.  In that case, it would be helpful to edit this file as:
+The `run` string describes the Batch commands that gets run in a windows VM.  As one can see, the above line copies `README.md` file into `Documentation~/index.md`, and `CHANGELOG.md` file into `Documentation~/manual/changelog.md`.  Finally, it runs the `docfx` command at the last line to generate the documentation.  This multiline string can be updated to copy or change other documentation files.  For example, the developer may opt to draft their own homepage instead of copying `README.md` file from the package.  In that case, simply do the following:
 
-```yaml
-- name: Build
-  run: |
-    cp README.md Documentation~/manual/index.md
-    cp CHANGELOG.md Documentation~/manual/changelog.md
-    docfx Documentation~/docfx.json
-```
-
-Of course, if the developer chooses to make this edit, they should also delete the `Documentation~/manual/index.md` file, and add a line in `.gitignore` to ignore this file.
+1. Create the file, `Documentation~/index.md`, and fill it with the desired content.
+2. Edit `.github/workflows/documentation.yml` with the `name: Build` line reading as:
+    ```yaml
+    - name: Build
+      run: |
+        cp CHANGELOG.md Documentation~/manual/changelog.md
+        docfx Documentation~/docfx.json
+    ```
+3. (Optional) Remove the line, `Documentation~/index.*` from `.gitignore` so that changes in `Documentation~/index.md` will be properly tracked.
 
 After this line is updated to the developer's satisfaction, the repository must be configured to provide the Github access to the repo itself.
 
 ### Creating Secret Access Key
 
-To give Github Actions access to the package's repository, a private key must be created and shared.
+To give Github Actions access to the package's repository, a private key must be created and shared (this key is used user/organization-wide.)  If one hasn't been created yet, follow the instructions below.
 
 1. If the developer hasn't done this step already, go to ["Settings -> Developer Settings -> Personal access token,"](https://github.com/settings/tokens) and generate a new token with full access to `repo`.  Don't forget to copy the secret key printed on the new entry in a safe location.
-   - ![Personal Access Token](https://omiyagames.github.io/template-unity-package/resources/personalAccessToken.png)
+   ![Personal Access Token](https://omiyagames.github.io/template-unity-package/resources/personalAccessToken.png)
 2. Return to the Github repository, then go to "Settings -> Secrets," and add the generated key into the list.  Remember to name this key as, `AccessToken`.
-   - ![Add Secret](https://omiyagames.github.io/template-unity-package/resources/addingSecrets.png)
-3. Finally, push the repository to the master branch to deploy the automated commands!  A new breanch, `gh-pages`, and website, `https://<username>.github.io/<repo-name>/` will be created as part of this process.
+   ![Add Secret](https://omiyagames.github.io/template-unity-package/resources/addingSecrets.png)
+
+Once a key is available, each project simply needs to configure their project to point to the generated documentation:
+
+1. Push the repository to the master branch to deploy the automated commands, then wait until the command finished (the orange dot next to the commit hash will change to a green checkmark.)
+2. Click on `Settings` below the project's name (marked as #1 in the screenshot below), then `Pages` on the left sidebar (#2.)
+3. Click on `Branch: None` to expand its selection (#3.)  Observe that `gh-pages` should now be selectable.  Click on `gh-pages` (#4.)
+4. Click the `Save` button.  This may take a while; wait until the notification above the controls turn into a green checkmark
+    ![Configure GitHub Pages](https://omiyagames.github.io/template-unity-package/resources/configureGitHubPages.png)
 
 For more information, check the [Github Pages Deploy Action documentation](https://github.com/JamesIves/github-pages-deploy-action).
 
@@ -106,7 +115,7 @@ There are two fields the developer will probably want to edit:
 ```json
 "globalMetadata": {
     "_appTitle": "Template Unity Package documentation",
-    "_appFooter": "Copyright © 2020 Omiya Games",
+    "_appFooter": "Copyright © 2019-2022 Omiya Games",
     "_enableSearch": true
 },
 ```
@@ -158,13 +167,15 @@ As the `README.md` file under this folder mentions, the `manual` folder is where
 ```yaml
 - name: Customizing Package
   items:
-  - name: Package Files
+  - name: Package Structure
+    href: structure.md
+  - name: Customizing Package Files
     href: customizePackage.md
-  - name: Source Code and Assets
+  - name: Adding Source Code and Assets
     href: customizeSource.md
-  - name: Importable Assets
+  - name: Adding Importable Assets
     href: customizeSamples.md
-  - name: Documentation
+  - name: Customizing Documentation
     href: customizeDocumentation.md
 - name: Change Log
   href: changelog.md
