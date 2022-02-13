@@ -88,7 +88,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "FTVeRppu6A1rnFCi6Sm5jbxxbVgjTdb636hEOlOBozU="
+          "hash": "TBTaNVI6BwGiwmTfvZelSIUQyNsMKjgUo05jE34jLJI="
         }
       },
       "is_incremental": false,
@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/changelog.html",
-          "hash": "6h8cl79W5p4H3gKPExz+9dIlxxpPr4w6U22B14cwcwg="
+          "hash": "Ka4wAHB685pV5BCTNgrNPlDa83pihlBzpZClTNiY1CM="
         }
       },
       "is_incremental": false,
@@ -170,12 +170,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "manual/structure.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/structure.html",
+          "hash": "BS/arQwrAuSegfQzDsh16kJ2u5bxTAU4o4KmzVtUXNs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "manual/toc.yml",
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "BfKfIlQqat9wp9c3qn1lewr/21v9MNfx8ZrV55w24n4="
+          "hash": "p4KPFUM0BmV6UQMTOLxPErM+Ym3wjX0AboUtAQghOn0="
         }
       },
       "is_incremental": false,
@@ -242,7 +254,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "ytfYqQUDy56mz1dkbbi/NRni7LPPjVlfv7qa30E00Fg="
+          "hash": "qLQRWIwy9Gjbt8Kn/svCScNoW4YNbtfk4CagsnpI6AU="
         }
       },
       "is_incremental": false,
@@ -263,7 +275,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 7,
+          "total_file_count": 8,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

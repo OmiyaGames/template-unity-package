@@ -72,91 +72,52 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="omiya-gameshttpswwwomiyagamescom---template-unity-package"><a href="https://www.omiyagames.com/">Omiya Games</a> - Template Unity Package</h1>
 
-<p><a href="https://ko-fi.com/I3I51KS8F"><img src="https://img.shields.io/badge/donate-ko--fi-29abe0.svg?logo=ko-fi" alt="Ko-fi Badge"></a> <a href="/LICENSE.md"><img src="https://img.shields.io/github/license/OmiyaGames/template-unity-package" alt="License Badge"></a></p>
+<p><a href="https://omiyagames.github.io/template-unity-package/"><img src="https://github.com/OmiyaGames/template-unity-package/workflows/Host%20DocFX%20Documentation/badge.svg" alt="Template Unity Package documentation"></a> <a href="https://ko-fi.com/I3I51KS8F"><img src="https://img.shields.io/badge/donate-ko--fi-29abe0.svg?logo=ko-fi" alt="Ko-fi Badge"></a> <a href="/LICENSE.md"><img src="https://img.shields.io/github/license/OmiyaGames/template-unity-package" alt="License Badge"></a></p>
 <p><img src="https://omiyagames.github.io/template-unity-package/resources/preview.png" alt="Unity Package Manager"></p>
-<p><strong>Template Unity Package</strong> is a Github template <a href="https://www.omiyagames.com/">Omiya Games</a> uses to start a new Unity package.  Developers intending to utilize this project as a starting point to develop their own package should <a href="https://github.com/OmiyaGames/template-unity-package">visit the Github page</a> and:</p>
+<p><strong>Template Unity Package</strong> is a Github template <a href="https://www.omiyagames.com/">Omiya Games</a> uses to start a new <a href="https://unity.com/">Unity</a> package.  To use this template for your own purposes, we recommend:</p>
 <ul>
-<li>If they plan on creating a new online repository on Github directly, click on the green &quot;Use this template&quot; button to get started, or</li>
+<li>Clicking on the green &quot;Use this template&quot; button to create a new online repository on Github directly, or</li>
 <li>Click the &quot;Releases&quot; link, and download the latest archive as zip or gzip file.</li>
 </ul>
-<h2 id="structure">Structure</h2>
-<p>The project follows <a href="https://docs.unity3d.com/Manual/cus-layout.html">Unity&#39;s recommend file and folder format</a>, albeit with a few changes:</p>
-<pre><code>&lt;root&gt;
-  ├── package.json
-  ├── README.md
-  ├── CHANGELOG.md
-  ├── LICENSE.md
-  ├── THIRD PARTY NOTICES.md
-  ├── .gitignore
-  ├── Runtime
-  │   ├── OmiyaGames.Template.asmdef
-  │   └── RuntimeExample.cs
-  ├── Editor
-  │   ├── OmiyaGames.Template.Editor.asmdef
-  │   └── EditorExample.cs
-  └── Tests
-  │   ├── Runtime
-  │   │   ├── OmiyaGames.Template.Tests.asmdef
-  │   │   └── RuntimeExampleTest.cs
-  │   └── Editor
-  │       ├── OmiyaGames.Template.Editor.Tests.asmdef
-  │       └── EditorExampleTest.cs
-  ├── Samples~
-  │   └── Example1
-  │       └── Example.txt
-  ├── Documentation~
-  |   ├── index.md
-  |   ├── Doxyfile
-  |   ├── docfx.json
-  |   ├── toc.yml
-  |   ├── filterConfig.yml
-  |   ├── manual
-  |   |   ├── toc.yml
-  |   |   ├── customizeDocumentation.md
-  |   |   ├── customizePackage.md
-  |   |   ├── customizeSamples.md
-  |   |   └── README.md
-  |   └── resources
-  |       ├── preview.png
-  |       └── README.md
-  └── .github
-      ├── FUNDING.yml
-      ├── ISSUE_TEMPLATE
-      |   ├── bug_report.md
-      |   ├── feature_request.md
-      |   ├── documentation-template.md
-      |   └── research_template.md
-      └── workflows
-          ├── documentation.yml
-          └── mirror.yml
-</code></pre><h2 id="common-text-formats">Common Text Formats</h2>
-<p>Note that this sprawling list of files contains a large number of common, human-readable (i.e. non-code, data-storing) text formats.  If some of these file extensions are unfamiliar, the following resources describes how to edit and format the most common text files used in this project:</p>
+<p>From there, consult the following documentation to get a better idea of what files should be edited and/or renamed, and how:</p>
 <ul>
-<li><a href="https://www.json.org/json-en.html">JSON (<code>*.json, *.asmdef</code>)</a><ul>
-<li>Although the <a href="https://en.wikipedia.org/wiki/JSON#Data_types_and_syntax">Wikipedia page</a> might be easier understand.</li>
+<li>This project&#39;s <a href="https://omiyagames.github.io/template-unity-package/">own documentation</a></li>
+<li><a href="https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/"><em>How to Split Up an Existing Unity Git Project into Smaller Unity Packages</em></a> by <a href="https://github.com/japtar10101">Taro Omiya</a></li>
 </ul>
-</li>
-<li><a href="https://yaml.org/spec/1.2/spec.html#Preview">YAML (<code>*.yml</code>)</a><ul>
-<li>Again, the <a href="https://en.wikipedia.org/wiki/YAML#Syntax">Wikipedia page</a>.</li>
-</ul>
-</li>
-<li><a href="https://www.markdownguide.org/getting-started/">Markdown (<code>*.md</code>)</a><ul>
-<li>They also provide <a href="https://www.markdownguide.org/cheat-sheet">a cheatsheet</a>!</li>
-</ul>
-</li>
-<li><a href="https://git-scm.com/docs/gitignore#_pattern_format">Bonus: <code>.gitignore</code></a></li>
-</ul>
-<h2 id="about-the-manual">About the Manual</h2>
-<p>As many of these files are intended to be edited and/or renamed, this manual has been split up into three parts.  The links below briefly covers how to update this package&#39;s files for your own package development.</p>
+<h2 id="on-documentation">On Documentation</h2>
+<p>This package uses <a href="https://dotnet.github.io/docfx/">DocFX</a> and Github Actions to auto-generate its documentation from both the comments in the source code and the Markdown files in the <a href="/Documentation~"><code>Documentation~</code></a> directory.  There is also has a pre-made <a href="https://github.com/doxygen/doxygen">Doxygen</a> settings file in the same directory to run Doxywizard through.</p>
+<p>As there are many steps to developing a Unity package, the documentation is currently split into a couple of parts, each covering a specific feature or overview:</p>
 <ul>
+<li><a href="https://omiyagames.github.io/template-unity-package/manual/structure.html">File and Folder Structure</a></li>
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizePackage.html">Customizing Package Files</a></li>
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizeSource.html">Adding Source Code and Assets</a></li>
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html">Adding Importable Assets</a></li>
 <li><a href="https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html">Customizing Documentation</a></li>
 </ul>
-<p>As an aside, <a href="https://github.com/japtar10101">the author</a> of this manual provided a more thorough guide with graphics on their own blog: <a href="https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/"><em>How to Split Up an Existing Unity Git Project into Smaller Unity Packages</em></a>.  It&#39;s worth reviewing if the manual seems a little sparse.  Finally, changes in the project is documented under the <a href="https://omiyagames.github.io/template-unity-package/manual/changelog.html">change log page</a>.</p>
+<p>Finally, changes in the project is documented under the <a href="https://omiyagames.github.io/template-unity-package/manual/changelog.html">change log page</a>.</p>
+<h2 id="install">Install</h2>
+<p>There are two common methods for installing this package.</p>
+<h3 id="through-unity-package-managerhttpsdocsunity3dcommanualupm-ui-giturlhtml">Through <a href="https://docs.unity3d.com/Manual/upm-ui-giturl.html">Unity Package Manager</a></h3>
+<p>Unity&#39;s own Package Manager supports <a href="https://docs.unity3d.com/Manual/upm-ui-giturl.html">importing packages through a URL to a Git repo</a>:</p>
+<ol>
+<li>First, on this repository page, click the &quot;Clone or download&quot; button, and copy over this repository&#39;s HTTPS URL.  </li>
+<li>Then click on the + button on the upper-left-hand corner of the Package Manager, select &quot;Add package from git URL...&quot; on the context menu, then paste this repo&#39;s URL!</li>
+</ol>
+<p>While easy and straightforward, this method has a few major downside: it does not support dependency resolution and package upgrading when a new version is released.  To add support for that, the following method is recommended:</p>
+<h3 id="through-openupmhttpsopenupmcom">Through <a href="https://openupm.com/">OpenUPM</a></h3>
+<p>Installing via <a href="https://openupm.com/">OpenUPM&#39;s command line tool</a> is recommended because it supports dependency resolution, upgrading, and downgrading this package.  Given this package is just an example, thought, it hadn&#39;t been added into OpenUPM yet.  So the rest of these instructions are hypothetical...for now...</p>
+<p>If you haven&#39;t already <a href="https://openupm.com/docs/getting-started.html#installing-openupm-cli">installed OpenUPM</a>, you can do so through Node.js&#39;s <code>npm</code> (obviously have Node.js installed in your system first):</p>
+<pre><code>npm install -g openupm-cli
+</code></pre><p>Then, to install this package, just run the following command at the root of your Unity project:</p>
+<pre><code>openupm add com.omiyagames.template
+</code></pre><h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://omiyagames.github.io/template-unity-package/">Documentation</a></li>
+<li><a href="/CHANGELOG.md">Change Log</a></li>
+</ul>
 <h2 id="license">LICENSE</h2>
-<p>Overall package is licensed under <a href="https://github.com/OmiyaGames/template-unity-package/blob/master/LICENSE.md">MIT</a>, unless otherwise noted in the <a href="https://github.com/OmiyaGames/template-unity-package/blob/master/THIRD%20PARTY%20NOTICES.md">3rd party licenses</a> file and/or source code.</p>
+<p>Overall package is licensed under <a href="/LICENSE.md">MIT</a>, unless otherwise noted in the <a href="/THIRD%20PARTY%20NOTICES.md">3rd party licenses</a> file and/or source code.</p>
+<p>Copyright (c) 2019-2022 Omiya Games</p>
 </article>
           </div>
           
