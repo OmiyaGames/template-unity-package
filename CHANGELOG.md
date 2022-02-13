@@ -1,5 +1,10 @@
 # Change Log:
 
+## 1.4.3
+
+- Enhancement: restructuring the documentation so that the [`README.md`](/README.md) at the root of the project becomes the homepage of the DocFX-generated documentation.  The old `index.md` has now been added to `Documentation~/manual` folder, as the first page describing the content of this package.  This should make updating documentation easier for future projects, as only the `README.md` file needs to be updated to change the homepage.
+- Enhancement: extending license year to 2022
+
 ## 1.4.2
 
 - Enhancement: adding conditionals to [`.github/workflows/documentation.yml`](/.github/workflows/documentation.yml) and [`.github/workflows/mirror.yml`](/.github/workflows/mirror.yml) to prevent the jobs from running on other repos copying this template automatically.  Added comments, and updated documentation indicating these conditional's purpose, and how to remove them.
