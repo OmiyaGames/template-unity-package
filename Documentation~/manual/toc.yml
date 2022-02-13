@@ -1,12 +1,14 @@
 - name: Customizing Package
   items:
-  - name: Package Files
+  - name: Structure
+    href: structure.md
+  - name: Customize Package Files
     href: customizePackage.md
-  - name: Source Code and Assets
+  - name: Customize Source Code and Assets
     href: customizeSource.md
-  - name: Importable Assets
+  - name: Customize Importable Assets
     href: customizeSamples.md
-  - name: Documentation
+  - name: Customize Documentation
     href: customizeDocumentation.md
 - name: Change Log
   href: changelog.md

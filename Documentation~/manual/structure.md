@@ -1,15 +1,4 @@
-# [Omiya Games](https://www.omiyagames.com/) - Template Unity Package
-
-[![Ko-fi Badge](https://img.shields.io/badge/donate-ko--fi-29abe0.svg?logo=ko-fi)](https://ko-fi.com/I3I51KS8F) [![License Badge](https://img.shields.io/github/license/OmiyaGames/template-unity-package)](/LICENSE.md)
-
-![Unity Package Manager](https://omiyagames.github.io/template-unity-package/resources/preview.png)
-
-**Template Unity Package** is a Github template [Omiya Games](https://www.omiyagames.com/) uses to start a new Unity package.  Developers intending to utilize this project as a starting point to develop their own package should [visit the Github page](https://github.com/OmiyaGames/template-unity-package) and:
-
-- If they plan on creating a new online repository on Github directly, click on the green "Use this template" button to get started, or
-- Click the "Releases" link, and download the latest archive as zip or gzip file.
-
-## Structure
+# Structure
 
 The project follows [Unity's recommend file and folder format](https://docs.unity3d.com/Manual/cus-layout.html), albeit with a few changes:
 
@@ -75,18 +64,3 @@ Note that this sprawling list of files contains a large number of common, human-
 - [Markdown (`*.md`)](https://www.markdownguide.org/getting-started/)
     - They also provide [a cheatsheet](https://www.markdownguide.org/cheat-sheet)!
 - [Bonus: `.gitignore`](https://git-scm.com/docs/gitignore#_pattern_format)
-
-## About the Manual
-
-As many of these files are intended to be edited and/or renamed, this manual has been split up into three parts.  The links below briefly covers how to update this package's files for your own package development.
-
-- [Customizing Package Files](https://omiyagames.github.io/template-unity-package/manual/customizePackage.html)
-- [Adding Source Code and Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSource.html)
-- [Adding Importable Assets](https://omiyagames.github.io/template-unity-package/manual/customizeSamples.html)
-- [Customizing Documentation](https://omiyagames.github.io/template-unity-package/manual/customizeDocumentation.html)
-
-As an aside, [the author](https://github.com/japtar10101) of this manual provided a more thorough guide with graphics on their own blog: [*How to Split Up an Existing Unity Git Project into Smaller Unity Packages*](https://www.taroomiya.com/2020/04/29/how-to-split-up-an-existing-unity-git-project-into-smaller-unity-packages/).  It's worth reviewing if the manual seems a little sparse.  Finally, changes in the project is documented under the [change log page](https://omiyagames.github.io/template-unity-package/manual/changelog.html).
-
-## LICENSE
-
-Overall package is licensed under [MIT](https://github.com/OmiyaGames/template-unity-package/blob/master/LICENSE.md), unless otherwise noted in the [3rd party licenses](https://github.com/OmiyaGames/template-unity-package/blob/master/THIRD%20PARTY%20NOTICES.md) file and/or source code.
