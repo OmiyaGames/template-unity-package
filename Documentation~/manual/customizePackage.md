@@ -1,4 +1,4 @@
-# Customizing Package
+# Customizing Package Files
 
 This part of the manual pertains to the following folders and files:
 
